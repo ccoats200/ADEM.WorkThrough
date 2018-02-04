@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -37,7 +38,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="CKx-d5-ess" customClass="ProductCell" customModule="ADEM" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="CKx-d5-ess" customClass="ProductCell" customModule="ADEM" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="116" height="144"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -114,7 +115,10 @@
                                             <outlet property="itemImage" destination="Mva-Gr-NMS" id="A4U-u4-mTp"/>
                                             <outlet property="productName" destination="HgI-sK-IaL" id="E4W-Rh-C8c"/>
                                             <outlet property="productPrice" destination="VbB-Vg-tLp" id="8W8-8G-GpS"/>
-                                            <segue destination="1PX-bW-rwb" kind="show" id="86O-5q-965"/>
+                                            <segue destination="1PX-bW-rwb" kind="show" identifier="Details" id="86O-5q-965">
+                                                <segue key="commit" inheritsFrom="parent" id="lHg-pj-GxA"/>
+                                                <segue key="preview" inheritsFrom="commit" id="2gj-Lf-LOK"/>
+                                            </segue>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -250,4 +254,7 @@
         <image name="Bookmark-Sharp" width="33" height="40"/>
         <image name="Bookmark-Sharp-1" width="33" height="40"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="86O-5q-965"/>
+    </inferredMetricsTieBreakers>
 </document>

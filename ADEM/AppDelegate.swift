@@ -9,6 +9,11 @@
 import UIKit
 import CoreData
 
+//MARK: Important
+/*Remember to ignore Firebase and private info. see https://help.github.com/articles/ignoring-files/
+*/
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

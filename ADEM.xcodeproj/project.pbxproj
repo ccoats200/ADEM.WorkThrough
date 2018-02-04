@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		354D636320213D1600645A7F /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354D636220213D1600645A7F /* ProductCell.swift */; };
 		354D6365202187C300645A7F /* Bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354D6364202187C300645A7F /* Bluetooth.swift */; };
+		35579D34202681C3009708BD /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35579D33202681C3009708BD /* Product.swift */; };
+		35579D37202682C9009708BD /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35579D36202682C9009708BD /* DataService.swift */; };
 		3593C146201A59A20064DB5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3593C145201A59A20064DB5F /* AppDelegate.swift */; };
 		3593C148201A59A20064DB5F /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3593C147201A59A20064DB5F /* ListVC.swift */; };
 		3593C14B201A59A20064DB5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3593C149201A59A20064DB5F /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 /* Begin PBXFileReference section */
 		354D636220213D1600645A7F /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		354D6364202187C300645A7F /* Bluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth.swift; sourceTree = "<group>"; };
+		35579D33202681C3009708BD /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		35579D36202682C9009708BD /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		3593C142201A59A20064DB5F /* ADEM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADEM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3593C145201A59A20064DB5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3593C147201A59A20064DB5F /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
@@ -80,6 +84,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35579D32202681B8009708BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				35579D33202681C3009708BD /* Product.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		35579D352026828C009708BD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				35579D36202682C9009708BD /* DataService.swift */,
+				354D6364202187C300645A7F /* Bluetooth.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		35579D38202689F8009708BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				354D636220213D1600645A7F /* ProductCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		35579D3920268A22009708BD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3593C147201A59A20064DB5F /* ListVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		3593C139201A59A20064DB5F = {
 			isa = PBXGroup;
 			children = (
@@ -103,11 +140,12 @@
 		3593C144201A59A20064DB5F /* ADEM */ = {
 			isa = PBXGroup;
 			children = (
+				35579D3920268A22009708BD /* Controller */,
+				35579D38202689F8009708BD /* Views */,
+				35579D352026828C009708BD /* Services */,
+				35579D32202681B8009708BD /* Model */,
 				3593C145201A59A20064DB5F /* AppDelegate.swift */,
-				3593C147201A59A20064DB5F /* ListVC.swift */,
-				354D636220213D1600645A7F /* ProductCell.swift */,
 				3593C149201A59A20064DB5F /* Main.storyboard */,
-				354D6364202187C300645A7F /* Bluetooth.swift */,
 				3593C14F201A59A20064DB5F /* Assets.xcassets */,
 				3593C151201A59A20064DB5F /* LaunchScreen.storyboard */,
 				3593C154201A59A20064DB5F /* Info.plist */,
@@ -269,10 +307,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3593C14E201A59A20064DB5F /* ADEM.xcdatamodeld in Sources */,
+				35579D37202682C9009708BD /* DataService.swift in Sources */,
 				3593C148201A59A20064DB5F /* ListVC.swift in Sources */,
 				354D636320213D1600645A7F /* ProductCell.swift in Sources */,
 				354D6365202187C300645A7F /* Bluetooth.swift in Sources */,
 				3593C146201A59A20064DB5F /* AppDelegate.swift in Sources */,
+				35579D34202681C3009708BD /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

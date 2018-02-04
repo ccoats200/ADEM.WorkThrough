@@ -10,10 +10,17 @@ import UIKit
 
 class ProductCell: UICollectionViewCell {
 	@IBOutlet weak var itemImage: UIImageView!
-	
 	@IBOutlet weak var productName: UILabel!
 	@IBOutlet weak var calCount: UILabel!
 	@IBOutlet weak var productPrice: UILabel!
+	
+	func updateViews(product: Product){
+		itemImage.image = UIImage(named: product.imageName)
+		productName.text = product.title
+		calCount.text = product.cal
+		productPrice.text = product.price
+		
+	}
 	
 }
 
