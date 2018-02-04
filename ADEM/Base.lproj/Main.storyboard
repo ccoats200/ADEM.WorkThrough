@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -60,19 +59,10 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TN5-Dx-vbA">
-                                                    <rect key="frame" x="78.5" y="0.0" width="31.5" height="39.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="39.700000000000003" id="p4I-zM-jzY"/>
-                                                        <constraint firstAttribute="width" constant="31.73" id="pnk-YJ-NaL"/>
-                                                    </constraints>
-                                                    <state key="normal" image="Bookmark-Sharp-1"/>
-                                                    <state key="selected" image="Bookmark-Sharp"/>
-                                                </button>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1f8-Nh-UCw">
                                                     <rect key="frame" x="2" y="117" width="112" height="14"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strawberries" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgI-sK-IaL">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strawberries" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgI-sK-IaL">
                                                             <rect key="frame" x="0.0" y="0.0" width="74" height="14"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                             <nil key="textColor"/>
@@ -99,11 +89,9 @@
                                         <constraints>
                                             <constraint firstItem="CGu-E1-ggY" firstAttribute="leading" secondItem="CKx-d5-ess" secondAttribute="leading" constant="2" id="4hi-c5-KRb"/>
                                             <constraint firstItem="Mva-Gr-NMS" firstAttribute="top" secondItem="CKx-d5-ess" secondAttribute="top" id="4xI-i5-RD7"/>
-                                            <constraint firstItem="TN5-Dx-vbA" firstAttribute="top" secondItem="CKx-d5-ess" secondAttribute="top" id="6Go-zc-2dh"/>
                                             <constraint firstItem="1f8-Nh-UCw" firstAttribute="leading" secondItem="CKx-d5-ess" secondAttribute="leading" constant="2" id="EL6-2t-GTK"/>
                                             <constraint firstAttribute="bottom" secondItem="CGu-E1-ggY" secondAttribute="bottom" constant="2" id="HeM-Bt-Td8"/>
                                             <constraint firstItem="Mva-Gr-NMS" firstAttribute="leading" secondItem="CKx-d5-ess" secondAttribute="leading" id="Kha-mj-KA2"/>
-                                            <constraint firstAttribute="trailing" secondItem="TN5-Dx-vbA" secondAttribute="trailing" constant="6" id="VoT-S3-Faf"/>
                                             <constraint firstAttribute="trailing" secondItem="1f8-Nh-UCw" secondAttribute="trailing" constant="2" id="YJQ-q8-vG8"/>
                                             <constraint firstItem="1f8-Nh-UCw" firstAttribute="top" secondItem="Mva-Gr-NMS" secondAttribute="bottom" constant="2" id="oDV-HK-1dh"/>
                                             <constraint firstItem="CGu-E1-ggY" firstAttribute="top" secondItem="1f8-Nh-UCw" secondAttribute="bottom" constant="1" id="pjA-eF-XqD"/>
@@ -115,10 +103,6 @@
                                             <outlet property="itemImage" destination="Mva-Gr-NMS" id="A4U-u4-mTp"/>
                                             <outlet property="productName" destination="HgI-sK-IaL" id="E4W-Rh-C8c"/>
                                             <outlet property="productPrice" destination="VbB-Vg-tLp" id="8W8-8G-GpS"/>
-                                            <segue destination="1PX-bW-rwb" kind="show" identifier="Details" id="86O-5q-965">
-                                                <segue key="commit" inheritsFrom="parent" id="lHg-pj-GxA"/>
-                                                <segue key="preview" inheritsFrom="commit" id="2gj-Lf-LOK"/>
-                                            </segue>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -131,6 +115,9 @@
                         <barButtonItem key="leftBarButtonItem" title="Settings" id="s1v-Vp-WTL"/>
                         <barButtonItem key="rightBarButtonItem" title="Checkout" id="NRw-X7-WBm"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="productsCollection" destination="ZHL-jB-1tM" id="I9W-l8-tsE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -250,11 +237,4 @@
             <point key="canvasLocation" x="272" y="-648.57571214392806"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Bookmark-Sharp" width="33" height="40"/>
-        <image name="Bookmark-Sharp-1" width="33" height="40"/>
-    </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="86O-5q-965"/>
-    </inferredMetricsTieBreakers>
 </document>

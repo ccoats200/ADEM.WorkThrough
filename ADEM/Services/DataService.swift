@@ -9,17 +9,16 @@
 import Foundation
 
 class DataService {
-	
 	static let instance = DataService()
 	
-	private let itemOptions = [
-		Product(title: "Eggs", price: "4.94", imageName: "eggs.jpg", cal: "340")
+	private let NFCProducts = [
+		Product(title: "Eggs", price: "4.94", imageName: "eggs.jpg", cal: "340"),
+		Product(title: "Milk", price: "4.00", imageName: "milk.jpg", cal: "500")
 	]
 	
-	
-	private let Grocery = [Product]()
+	private let Groceries = [Product]()
 	
 	func getGroceryOptions() -> [Product] {
-		return itemOptions
+		return NFCProducts
 	}
 }

@@ -7,13 +7,13 @@
 //
 
 import Foundation
+
 struct Product {
 	private(set) public var title: String
 	private(set) public var price: String
 	private(set) public var imageName: String
 	private(set) public var cal: String
-
-
+	
 	init(title: String, price: String, imageName: String, cal: String) {
 		self.title = title
 		self.price = price
@@ -21,4 +21,5 @@ struct Product {
 		self.cal = cal
 	}
 }
+
 
