@@ -9,7 +9,6 @@
 import UIKit
 
 class ListVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-	
 	@IBOutlet weak var productsCollection: UICollectionView!
 	
 	private(set) public var products = [Product]()

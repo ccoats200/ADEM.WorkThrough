@@ -7,8 +7,9 @@
 //
 
 import Foundation
+//
+//if let results = results {
+//	// 3
+//	print("Found \(results.searchResults.count) matching \(results.searchTerm)")
+//	self.searches.insert(results, at: 0)
 
-if let results = results {
-	// 3
-	print("Found \(results.searchResults.count) matching \(results.searchTerm)")
-	self.searches.insert(results, at: 0)

@@ -116,8 +116,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Shopping List" id="3jA-x3-vS5">
-                        <barButtonItem key="leftBarButtonItem" title="Settings" id="s1v-Vp-WTL"/>
-                        <barButtonItem key="rightBarButtonItem" title="Checkout" id="NRw-X7-WBm"/>
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="s1v-Vp-WTL">
+                            <connections>
+                                <action selector="Settings:" destination="BYZ-38-t0r" id="ywW-cv-eOL"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Checkout" id="NRw-X7-WBm">
+                            <connections>
+                                <action selector="Checkout:" destination="BYZ-38-t0r" id="d4T-7T-ecH"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="productsCollection" destination="ZHL-jB-1tM" id="AgA-h2-z2x"/>
