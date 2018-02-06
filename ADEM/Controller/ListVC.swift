@@ -35,13 +35,11 @@ class ListVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as? ProductCell {
-			let product = products[IndexPath]
+			let product = products[indexPath.row]
 			cell.updateViews(product: product)
 			return cell
 		}
 		return ProductCell()
 	}
-	
-	
 }
 

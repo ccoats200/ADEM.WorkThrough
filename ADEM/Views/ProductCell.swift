@@ -19,7 +19,6 @@ class ProductCell: UICollectionViewCell {
 		productName.text = product.title
 		calCount.text = product.cal
 		productPrice.text = product.price
-		
 	}
 	
 }

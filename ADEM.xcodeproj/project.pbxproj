@@ -19,6 +19,7 @@
 		3593C153201A59A20064DB5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3593C151201A59A20064DB5F /* LaunchScreen.storyboard */; };
 		3593C15E201A59A30064DB5F /* ADEMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3593C15D201A59A30064DB5F /* ADEMTests.swift */; };
 		3593C169201A59A30064DB5F /* ADEMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3593C168201A59A30064DB5F /* ADEMUITests.swift */; };
+		35A26D4A202932FE0035392B /* addProductToTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A26D49202932FE0035392B /* addProductToTop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		3593C164201A59A30064DB5F /* ADEMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADEMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3593C168201A59A30064DB5F /* ADEMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADEMUITests.swift; sourceTree = "<group>"; };
 		3593C16A201A59A30064DB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35A26D49202932FE0035392B /* addProductToTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addProductToTop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 		3593C144201A59A20064DB5F /* ADEM */ = {
 			isa = PBXGroup;
 			children = (
+				35A26D48202932C90035392B /* Extensions */,
 				35579D3920268A22009708BD /* Controller */,
 				35579D38202689F8009708BD /* Views */,
 				35579D352026828C009708BD /* Services */,
@@ -170,6 +173,14 @@
 				3593C16A201A59A30064DB5F /* Info.plist */,
 			);
 			path = ADEMUITests;
+			sourceTree = "<group>";
+		};
+		35A26D48202932C90035392B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				35A26D49202932FE0035392B /* addProductToTop.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35A26D4A202932FE0035392B /* addProductToTop.swift in Sources */,
 				3593C14E201A59A20064DB5F /* ADEM.xcdatamodeld in Sources */,
 				35579D37202682C9009708BD /* DataService.swift in Sources */,
 				3593C148201A59A20064DB5F /* ListVC.swift in Sources */,
