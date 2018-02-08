@@ -36,14 +36,14 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="CKx-d5-ess" customClass="ProductCell" customModule="ADEM" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" semanticContentAttribute="forceLeftToRight" reuseIdentifier="ProductCell" id="CKx-d5-ess" customClass="ProductCell" customModule="ADEM" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="116" height="144"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="116" height="144"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mva-Gr-NMS">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eggs" translatesAutoresizingMaskIntoConstraints="NO" id="Mva-Gr-NMS">
                                                     <rect key="frame" x="0.0" y="0.0" width="116" height="115"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="115" id="a9U-eq-Hyo"/>
@@ -81,7 +81,7 @@
                                                 </stackView>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.07282007486" green="0.5830315948" blue="0.85734552149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="CGu-E1-ggY" firstAttribute="leading" secondItem="CKx-d5-ess" secondAttribute="leading" constant="2" id="4hi-c5-KRb"/>
@@ -97,10 +97,11 @@
                                         </constraints>
                                         <size key="customSize" width="116" height="144"/>
                                         <connections>
-                                            <outlet property="calCount" destination="CGu-E1-ggY" id="o9P-JX-hiV"/>
-                                            <outlet property="itemImage" destination="Mva-Gr-NMS" id="A4U-u4-mTp"/>
-                                            <outlet property="productName" destination="HgI-sK-IaL" id="E4W-Rh-C8c"/>
-                                            <outlet property="productPrice" destination="VbB-Vg-tLp" id="8W8-8G-GpS"/>
+                                            <outlet property="calCount" destination="CGu-E1-ggY" id="inC-jn-ip8"/>
+                                            <outlet property="itemImage" destination="Mva-Gr-NMS" id="3UL-Xt-bdt"/>
+                                            <outlet property="productName" destination="VbB-Vg-tLp" id="aiv-hN-Wqc"/>
+                                            <outlet property="productPrice" destination="VbB-Vg-tLp" id="hO1-yQ-L1l"/>
+                                            <segue destination="1PX-bW-rwb" kind="show" id="Z9f-OU-Rq5"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -185,6 +186,10 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eggs" translatesAutoresizingMaskIntoConstraints="NO" id="eBd-NL-0Ul">
+                                <rect key="frame" x="57" y="64" width="254" height="184"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Q2O-h8-BtG"/>
@@ -232,4 +237,7 @@
             <point key="canvasLocation" x="272" y="-648.57571214392806"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="eggs" width="275" height="183"/>
+    </resources>
 </document>

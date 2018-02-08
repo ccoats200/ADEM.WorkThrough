@@ -11,13 +11,13 @@ import Foundation
 class DataService {
 	static let instance = DataService()
 	
-	private let NFCProducts = [
+	private let item = [
 		Product(title: "Eggs", price: "4.94", imageName: "eggs.jpeg", cal: "340"),
 	]
 	
 	private let Groceries = [Product]()
 	
 	func getGroceryOptions() -> [Product] {
-		return NFCProducts
+		return item
 	}
 }
