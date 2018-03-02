@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		352739A12041046100516A7C /* CellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352739A02041046100516A7C /* CellLayout.swift */; };
+		352739A320410BEE00516A7C /* ItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352739A220410BEE00516A7C /* ItemVC.swift */; };
+		3544FF96203A897F0094F1C0 /* layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3544FF95203A897F0094F1C0 /* layout.swift */; };
 		354D636320213D1600645A7F /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354D636220213D1600645A7F /* ProductCell.swift */; };
 		354D6365202187C300645A7F /* Bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354D6364202187C300645A7F /* Bluetooth.swift */; };
 		35579D34202681C3009708BD /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35579D33202681C3009708BD /* Product.swift */; };
 		35579D37202682C9009708BD /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35579D36202682C9009708BD /* DataService.swift */; };
-		358993DA202A461500A15F60 /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358993D9202A461400A15F60 /* CollectionReusableView.swift */; };
 		3593C146201A59A20064DB5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3593C145201A59A20064DB5F /* AppDelegate.swift */; };
 		3593C148201A59A20064DB5F /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3593C147201A59A20064DB5F /* ListVC.swift */; };
 		3593C14B201A59A20064DB5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3593C149201A59A20064DB5F /* Main.storyboard */; };
@@ -21,6 +23,9 @@
 		3593C15E201A59A30064DB5F /* ADEMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3593C15D201A59A30064DB5F /* ADEMTests.swift */; };
 		3593C169201A59A30064DB5F /* ADEMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3593C168201A59A30064DB5F /* ADEMUITests.swift */; };
 		35A26D4A202932FE0035392B /* addProductToTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A26D49202932FE0035392B /* addProductToTop.swift */; };
+		3E2AA5260F2429C05B336FC1 /* Pods_ADEMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C219EC1FF237CEA74D25F9E9 /* Pods_ADEMTests.framework */; };
+		9F9434089BCA897A6AD1E848 /* Pods_ADEMUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E773DA392E4F4DA5AD4C6AF /* Pods_ADEMUITests.framework */; };
+		A4AEDBB4528F185DE53207E5 /* Pods_ADEM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E11B6FADE150118FEF2ECE1 /* Pods_ADEM.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,11 +46,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0588B8663E0FDD4A4C268DAD /* Pods-ADEMUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADEMUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADEMUITests/Pods-ADEMUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0EB804098398EA66C26EDC2B /* Pods-ADEMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADEMTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADEMTests/Pods-ADEMTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0FAB7C24BC31B08AD2A09C24 /* Pods-ADEM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADEM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADEM/Pods-ADEM.debug.xcconfig"; sourceTree = "<group>"; };
+		1E773DA392E4F4DA5AD4C6AF /* Pods_ADEMUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ADEMUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		245909CF130337B03D70A882 /* Pods-ADEMUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADEMUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ADEMUITests/Pods-ADEMUITests.release.xcconfig"; sourceTree = "<group>"; };
+		352739A02041046100516A7C /* CellLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellLayout.swift; sourceTree = "<group>"; };
+		352739A220410BEE00516A7C /* ItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemVC.swift; sourceTree = "<group>"; };
+		3544FF95203A897F0094F1C0 /* layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = layout.swift; sourceTree = "<group>"; };
 		354D636220213D1600645A7F /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		354D6364202187C300645A7F /* Bluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth.swift; sourceTree = "<group>"; };
 		35579D33202681C3009708BD /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		35579D36202682C9009708BD /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
-		358993D9202A461400A15F60 /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
 		3593C142201A59A20064DB5F /* ADEM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADEM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3593C145201A59A20064DB5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3593C147201A59A20064DB5F /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
@@ -61,6 +73,10 @@
 		3593C168201A59A30064DB5F /* ADEMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADEMUITests.swift; sourceTree = "<group>"; };
 		3593C16A201A59A30064DB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35A26D49202932FE0035392B /* addProductToTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addProductToTop.swift; sourceTree = "<group>"; };
+		4DDCF6069BB4A452BE88FB0E /* Pods-ADEMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADEMTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ADEMTests/Pods-ADEMTests.release.xcconfig"; sourceTree = "<group>"; };
+		8E11B6FADE150118FEF2ECE1 /* Pods_ADEM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ADEM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C219EC1FF237CEA74D25F9E9 /* Pods_ADEMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ADEMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C59BC220BFE98B00BEB73305 /* Pods-ADEM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADEM.release.xcconfig"; path = "Pods/Target Support Files/Pods-ADEM/Pods-ADEM.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4AEDBB4528F185DE53207E5 /* Pods_ADEM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E2AA5260F2429C05B336FC1 /* Pods_ADEMTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F9434089BCA897A6AD1E848 /* Pods_ADEMUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				3593C147201A59A20064DB5F /* ListVC.swift */,
-				358993D9202A461400A15F60 /* CollectionReusableView.swift */,
+				352739A220410BEE00516A7C /* ItemVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -129,6 +148,8 @@
 				3593C15C201A59A30064DB5F /* ADEMTests */,
 				3593C167201A59A30064DB5F /* ADEMUITests */,
 				3593C143201A59A20064DB5F /* Products */,
+				AF14E81D5379A1939BF50A37 /* Pods */,
+				36D4144A9BEE53C801A2B676 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -182,8 +203,33 @@
 			isa = PBXGroup;
 			children = (
 				35A26D49202932FE0035392B /* addProductToTop.swift */,
+				352739A02041046100516A7C /* CellLayout.swift */,
+				3544FF95203A897F0094F1C0 /* layout.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		36D4144A9BEE53C801A2B676 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E11B6FADE150118FEF2ECE1 /* Pods_ADEM.framework */,
+				C219EC1FF237CEA74D25F9E9 /* Pods_ADEMTests.framework */,
+				1E773DA392E4F4DA5AD4C6AF /* Pods_ADEMUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF14E81D5379A1939BF50A37 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0FAB7C24BC31B08AD2A09C24 /* Pods-ADEM.debug.xcconfig */,
+				C59BC220BFE98B00BEB73305 /* Pods-ADEM.release.xcconfig */,
+				0EB804098398EA66C26EDC2B /* Pods-ADEMTests.debug.xcconfig */,
+				4DDCF6069BB4A452BE88FB0E /* Pods-ADEMTests.release.xcconfig */,
+				0588B8663E0FDD4A4C268DAD /* Pods-ADEMUITests.debug.xcconfig */,
+				245909CF130337B03D70A882 /* Pods-ADEMUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,9 +239,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3593C16D201A59A30064DB5F /* Build configuration list for PBXNativeTarget "ADEM" */;
 			buildPhases = (
+				E452D907CC051BE53FD5CA4B /* [CP] Check Pods Manifest.lock */,
 				3593C13E201A59A20064DB5F /* Sources */,
 				3593C13F201A59A20064DB5F /* Frameworks */,
 				3593C140201A59A20064DB5F /* Resources */,
+				7B1AE34875D0CB9EB9BE4E95 /* [CP] Embed Pods Frameworks */,
+				B12489A18E9C8E5FD9C056A0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,9 +259,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3593C170201A59A30064DB5F /* Build configuration list for PBXNativeTarget "ADEMTests" */;
 			buildPhases = (
+				49B8F5C57DEF0FF65604703F /* [CP] Check Pods Manifest.lock */,
 				3593C155201A59A30064DB5F /* Sources */,
 				3593C156201A59A30064DB5F /* Frameworks */,
 				3593C157201A59A30064DB5F /* Resources */,
+				2E2953D799BFAA28FB55B78C /* [CP] Embed Pods Frameworks */,
+				A86B00C428AADFEEC74F5F78 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,9 +280,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3593C173201A59A30064DB5F /* Build configuration list for PBXNativeTarget "ADEMUITests" */;
 			buildPhases = (
+				8A0D61F28E67353B1E76D2DC /* [CP] Check Pods Manifest.lock */,
 				3593C160201A59A30064DB5F /* Sources */,
 				3593C161201A59A30064DB5F /* Frameworks */,
 				3593C162201A59A30064DB5F /* Resources */,
+				B91B2133E4CAE852A2B733B0 /* [CP] Embed Pods Frameworks */,
+				3FB76535FF0E54ADE5D27CD4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -315,16 +370,172 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2E2953D799BFAA28FB55B78C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ADEMTests/Pods-ADEMTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FB76535FF0E54ADE5D27CD4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ADEMUITests/Pods-ADEMUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49B8F5C57DEF0FF65604703F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ADEMTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B1AE34875D0CB9EB9BE4E95 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ADEM/Pods-ADEM-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/CollectionKit/CollectionKit.framework",
+				"${BUILT_PRODUCTS_DIR}/ViewAnimator/ViewAnimator.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CollectionKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewAnimator.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ADEM/Pods-ADEM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A0D61F28E67353B1E76D2DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ADEMUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A86B00C428AADFEEC74F5F78 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ADEMTests/Pods-ADEMTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B12489A18E9C8E5FD9C056A0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ADEM/Pods-ADEM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B91B2133E4CAE852A2B733B0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ADEMUITests/Pods-ADEMUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E452D907CC051BE53FD5CA4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ADEM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3593C13E201A59A20064DB5F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				358993DA202A461500A15F60 /* CollectionReusableView.swift in Sources */,
+				352739A12041046100516A7C /* CellLayout.swift in Sources */,
 				35A26D4A202932FE0035392B /* addProductToTop.swift in Sources */,
 				3593C14E201A59A20064DB5F /* ADEM.xcdatamodeld in Sources */,
+				3544FF96203A897F0094F1C0 /* layout.swift in Sources */,
 				35579D37202682C9009708BD /* DataService.swift in Sources */,
 				3593C148201A59A20064DB5F /* ListVC.swift in Sources */,
+				352739A320410BEE00516A7C /* ItemVC.swift in Sources */,
 				354D636320213D1600645A7F /* ProductCell.swift in Sources */,
 				354D6365202187C300645A7F /* Bluetooth.swift in Sources */,
 				3593C146201A59A20064DB5F /* AppDelegate.swift in Sources */,
@@ -492,6 +703,7 @@
 		};
 		3593C16E201A59A30064DB5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FAB7C24BC31B08AD2A09C24 /* Pods-ADEM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -507,6 +719,7 @@
 		};
 		3593C16F201A59A30064DB5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C59BC220BFE98B00BEB73305 /* Pods-ADEM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -522,6 +735,7 @@
 		};
 		3593C171201A59A30064DB5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EB804098398EA66C26EDC2B /* Pods-ADEMTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -539,6 +753,7 @@
 		};
 		3593C172201A59A30064DB5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DDCF6069BB4A452BE88FB0E /* Pods-ADEMTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -556,6 +771,7 @@
 		};
 		3593C174201A59A30064DB5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0588B8663E0FDD4A4C268DAD /* Pods-ADEMUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -572,6 +788,7 @@
 		};
 		3593C175201A59A30064DB5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 245909CF130337B03D70A882 /* Pods-ADEMUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

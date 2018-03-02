@@ -12,7 +12,7 @@ class DataService {
 	static let instance = DataService()
 	
 	private let item = [
-		Product(title: "Eggs", price: "4.94", imageName: "eggs.jpeg", cal: "340"),
+		Product(title: "Eggs", price: "$\(4.94)", imageName: "eggs.jpeg", cal: "Cal. \(340)"),
 	]
 	
 	private let Groceries = [Product]()

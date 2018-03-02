@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import ChameleonFramework
 
 //MARK: Important
 /*Remember to ignore Firebase and private info. see https://help.github.com/articles/ignoring-files/

@@ -21,5 +21,3 @@ struct Product {
 		self.cal = cal
 	}
 }
-
-
