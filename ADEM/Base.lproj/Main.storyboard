@@ -120,6 +120,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Settings" id="s1v-Vp-WTL">
                             <connections>
                                 <action selector="Settings:" destination="BYZ-38-t0r" id="ywW-cv-eOL"/>
+                                <segue destination="ghj-24-NKr" kind="show" id="vRw-bF-VPu"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Checkout" id="NRw-X7-WBm">
@@ -224,6 +225,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KhN-Kk-Nlu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-865" y="-205"/>
+        </scene>
+        <!--SettingsVC-->
+        <scene sceneID="THc-Na-QV2">
+            <objects>
+                <viewController id="ghj-24-NKr" customClass="SettingsVC" customModule="ADEM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HgC-yF-h2e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lOh-U9-a8F">
+                                <rect key="frame" x="163" y="200" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="connectSw:" destination="ghj-24-NKr" eventType="valueChanged" id="5tS-vV-4ZY"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGn-Dr-jIV">
+                                <rect key="frame" x="133" y="317" width="108" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Osm-UM-L8Q"/>
+                    </view>
+                    <connections>
+                        <outlet property="ConnectedLBL" destination="jGn-Dr-jIV" id="drI-kR-lq1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IYh-Il-Bdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1061.5999999999999" y="-1379.4602698650676"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UYs-tX-hgp">

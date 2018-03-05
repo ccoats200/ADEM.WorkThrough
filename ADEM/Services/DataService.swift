@@ -7,8 +7,13 @@
 //
 
 import Foundation
+import UIKit
+import CoreBluetooth
+
+//central = [[CBCentralManager alloca], initWithDelegate: self queue: nil options: nil];
 
 class DataService {
+	
 	static let instance = DataService()
 	
 	private let item = [
@@ -21,3 +26,30 @@ class DataService {
 		return item
 	}
 }
+
+//Pull the localName and manufacturing Data out of the advertising data
+//NSString *localName = [advertisementData objectForKey:CBAdvertisementDataLocalNameKey];
+//NSData   *mfgData   = [advertisementData objectForKey:CBAdvertisementDataManufacturerDataKey];
+
+//class central: CBCentralManager, CBCentralManagerDelegate {
+//
+//	override init(delegate: CBCentralManagerDelegate?,
+//		 queue: DispatchQueue?,
+//		 options: [String : Any]? = nil) {
+//
+//	}
+//
+//	func centralManager(_ central: CBCentralManager,
+//						didDiscover peripheral: CBPeripheral,
+//						advertisementData: [String : Any],
+//						rssi RSSI: NSNumber) {
+//
+//	}
+//
+//
+//	func centralManagerDidUpdateState(_ central: CBCentralManager) {
+//
+//	}
+//
+//}
+
