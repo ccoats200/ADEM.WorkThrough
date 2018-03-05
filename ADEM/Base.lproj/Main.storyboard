@@ -101,7 +101,7 @@
                                             <outlet property="itemImage" destination="Mva-Gr-NMS" id="3UL-Xt-bdt"/>
                                             <outlet property="productName" destination="HgI-sK-IaL" id="KrW-F0-Ly4"/>
                                             <outlet property="productPrice" destination="VbB-Vg-tLp" id="hO1-yQ-L1l"/>
-                                            <segue destination="1PX-bW-rwb" kind="show" id="Z9f-OU-Rq5"/>
+                                            <segue destination="1PX-bW-rwb" kind="show" id="LmW-al-zA0"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
