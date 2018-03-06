@@ -10,7 +10,6 @@
 		352739A12041046100516A7C /* CellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352739A02041046100516A7C /* CellLayout.swift */; };
 		352739A320410BEE00516A7C /* ItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352739A220410BEE00516A7C /* ItemVC.swift */; };
 		352BF8CC204CFDEA0084EC54 /* ItemDetailTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352BF8CB204CFDEA0084EC54 /* ItemDetailTV.swift */; };
-		3544FF96203A897F0094F1C0 /* layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3544FF95203A897F0094F1C0 /* layout.swift */; };
 		354D636320213D1600645A7F /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354D636220213D1600645A7F /* ProductCell.swift */; };
 		354D6365202187C300645A7F /* Bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354D6364202187C300645A7F /* Bluetooth.swift */; };
 		35579D34202681C3009708BD /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35579D33202681C3009708BD /* Product.swift */; };
@@ -59,7 +58,6 @@
 		352739A02041046100516A7C /* CellLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellLayout.swift; sourceTree = "<group>"; };
 		352739A220410BEE00516A7C /* ItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemVC.swift; sourceTree = "<group>"; };
 		352BF8CB204CFDEA0084EC54 /* ItemDetailTV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailTV.swift; sourceTree = "<group>"; };
-		3544FF95203A897F0094F1C0 /* layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = layout.swift; sourceTree = "<group>"; };
 		354D636220213D1600645A7F /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		354D6364202187C300645A7F /* Bluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth.swift; sourceTree = "<group>"; };
 		35579D33202681C3009708BD /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -218,7 +216,6 @@
 				35A26D49202932FE0035392B /* addProductToTop.swift */,
 				354D6364202187C300645A7F /* Bluetooth.swift */,
 				352739A02041046100516A7C /* CellLayout.swift */,
-				3544FF95203A897F0094F1C0 /* layout.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -556,7 +553,6 @@
 				352739A12041046100516A7C /* CellLayout.swift in Sources */,
 				35A26D4A202932FE0035392B /* addProductToTop.swift in Sources */,
 				3593C14E201A59A20064DB5F /* ADEM.xcdatamodeld in Sources */,
-				3544FF96203A897F0094F1C0 /* layout.swift in Sources */,
 				35579D37202682C9009708BD /* DataService.swift in Sources */,
 				3593C148201A59A20064DB5F /* ListVC.swift in Sources */,
 				35E3D26A2049E9770096C557 /* PeripheralVC.swift in Sources */,

@@ -101,7 +101,7 @@
                                             <outlet property="itemImage" destination="Mva-Gr-NMS" id="3UL-Xt-bdt"/>
                                             <outlet property="productName" destination="HgI-sK-IaL" id="KrW-F0-Ly4"/>
                                             <outlet property="productPrice" destination="VbB-Vg-tLp" id="hO1-yQ-L1l"/>
-                                            <segue destination="1PX-bW-rwb" kind="show" id="LmW-al-zA0"/>
+                                            <segue destination="1PX-bW-rwb" kind="showDetail" identifier="ProductCell" id="def-Wm-Lgn"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -119,18 +119,14 @@
                     <navigationItem key="navigationItem" title="Shopping List" id="3jA-x3-vS5">
                         <barButtonItem key="leftBarButtonItem" title="Settings" id="s1v-Vp-WTL">
                             <connections>
-                                <action selector="Settings:" destination="BYZ-38-t0r" id="ywW-cv-eOL"/>
+                                <action selector="settings:" destination="BYZ-38-t0r" id="jo8-Zm-c1F"/>
                                 <segue destination="ghj-24-NKr" kind="show" id="vRw-bF-VPu"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Checkout" id="NRw-X7-WBm">
-                            <connections>
-                                <action selector="Checkout:" destination="BYZ-38-t0r" id="d4T-7T-ecH"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Checkout" id="NRw-X7-WBm"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="productsCollection" destination="ZHL-jB-1tM" id="AgA-h2-z2x"/>
+                        <outlet property="productsCollection" destination="ZHL-jB-1tM" id="2nK-C7-ziG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

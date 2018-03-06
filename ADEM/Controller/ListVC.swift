@@ -28,6 +28,8 @@ class ListVC: UIViewController {
 		print("Did load views")
 	}
 
+	@IBAction func settings(_ sender: Any) {
+	}
 	func initProducts() {
 		products = DataService.instance.getGroceryOptions()
 		print("Did initilize cell")
