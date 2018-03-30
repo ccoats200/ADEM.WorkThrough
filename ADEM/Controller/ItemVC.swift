@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ItemVC: UITableViewController {
+class ItemVC: UIViewController {
 
 	@IBOutlet weak var item: UIImageView!
 		

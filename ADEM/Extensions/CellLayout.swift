@@ -18,6 +18,7 @@ extension ListVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
 		let width = 120
 		let height = 150
 		return CGSize(width: width, height: height)
+		
 	}
 	
 	//	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -32,7 +33,10 @@ extension ListVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
 	
 	
 	
+	
+	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		
 		if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as? ProductCell {
 			let product = products[indexPath.row]
 			cell.updateViews(product: product)
@@ -42,8 +46,9 @@ extension ListVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
 		}
 		return ProductCell()
 		
-		
 	}
+	
+
 	//	func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
 	//		<#code#>
 	//	}
@@ -54,6 +59,7 @@ extension ListVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
 	//	func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
 	//		return
 	//	}
+
 }
 
 

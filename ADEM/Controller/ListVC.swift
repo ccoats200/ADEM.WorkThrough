@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import ViewAnimator
 
 class ListVC: UIViewController {
 	
@@ -26,10 +26,21 @@ class ListVC: UIViewController {
 		productsCollection.delegate = self
 		initProducts()
 		print("Did load views")
+		
+//		if let layout = collectionView?.collectionViewLayout as? AdemLayout {
+//			layout.delegate = self
+//		}
+//		
+	let animation = AnimationType.from(direction: .top, offset: 30.0)
+	view.animate(animations: [animation])
+		
 	}
 
 	@IBAction func settings(_ sender: Any) {
+		
 	}
+	
+	
 	func initProducts() {
 		products = DataService.instance.getGroceryOptions()
 		print("Did initilize cell")
