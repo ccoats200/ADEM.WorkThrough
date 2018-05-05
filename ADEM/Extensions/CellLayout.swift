@@ -11,6 +11,8 @@ import UIKit
 
 extension ListVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 	
+	
+	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 //				let width: CGFloat = 3
 //				let spaceBetweenCells: CGFloat = 1
@@ -21,18 +23,11 @@ extension ListVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
 		
 	}
 	
-	//	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-	//		return
-	//	}
-	//
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		print("Did account for sections")
 		return products.count
 		
 	}
-	
-	
-	
 	
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -44,6 +39,9 @@ extension ListVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
 			collectionView.reloadItems(at: [indexPath])
 			return cell
 		}
+//		var backgroundColor: UIColor = .blue
+//
+
 		return ProductCell()
 		
 	}
@@ -61,6 +59,4 @@ extension ListVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
 	//	}
 
 }
-
-
 

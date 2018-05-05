@@ -9,6 +9,7 @@
 import UIKit
 
 class ProductCell: UICollectionViewCell {
+	
 	@IBOutlet weak var itemImage: UIImageView!
 	@IBOutlet weak var productName: UILabel!
 	@IBOutlet weak var productPrice: UILabel!
@@ -20,6 +21,9 @@ class ProductCell: UICollectionViewCell {
 //		contentView.layer.masksToBounds = true
 //	}
 //	
+	
+
+	
 	
 	func updateViews(product: Product){
 		itemImage.image = UIImage(named: product.imageName)

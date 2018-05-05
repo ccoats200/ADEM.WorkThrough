@@ -10,8 +10,11 @@
 		352739A12041046100516A7C /* CellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352739A02041046100516A7C /* CellLayout.swift */; };
 		352739A320410BEE00516A7C /* ItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352739A220410BEE00516A7C /* ItemVC.swift */; };
 		352BF8CC204CFDEA0084EC54 /* ItemDetailTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352BF8CB204CFDEA0084EC54 /* ItemDetailTV.swift */; };
+		35481F592072A8020072DBDA /* ListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35481F582072A8020072DBDA /* ListLayout.swift */; };
+		35481F5B2072BFC20072DBDA /* SettingsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35481F5A2072BFC10072DBDA /* SettingsLayout.swift */; };
 		354D636320213D1600645A7F /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354D636220213D1600645A7F /* ProductCell.swift */; };
 		354D6365202187C300645A7F /* Bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354D6364202187C300645A7F /* Bluetooth.swift */; };
+		354E9160206E7BB70000DAA9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354E915F206E7BB70000DAA9 /* Color.swift */; };
 		35579D34202681C3009708BD /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35579D33202681C3009708BD /* Product.swift */; };
 		35579D37202682C9009708BD /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35579D36202682C9009708BD /* DataService.swift */; };
 		3593C146201A59A20064DB5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3593C145201A59A20064DB5F /* AppDelegate.swift */; };
@@ -22,7 +25,6 @@
 		3593C153201A59A20064DB5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3593C151201A59A20064DB5F /* LaunchScreen.storyboard */; };
 		3593C15E201A59A30064DB5F /* ADEMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3593C15D201A59A30064DB5F /* ADEMTests.swift */; };
 		3593C169201A59A30064DB5F /* ADEMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3593C168201A59A30064DB5F /* ADEMUITests.swift */; };
-		35A26D4A202932FE0035392B /* addProductToTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A26D49202932FE0035392B /* addProductToTop.swift */; };
 		35BA660D206864EC00032B29 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BA660C206864EC00032B29 /* ListCell.swift */; };
 		35E3D2672049E74B0096C557 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35E3D2662049E74B0096C557 /* CoreBluetooth.framework */; };
 		35E3D26A2049E9770096C557 /* PeripheralVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E3D2692049E9770096C557 /* PeripheralVC.swift */; };
@@ -59,8 +61,11 @@
 		352739A02041046100516A7C /* CellLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellLayout.swift; sourceTree = "<group>"; };
 		352739A220410BEE00516A7C /* ItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemVC.swift; sourceTree = "<group>"; };
 		352BF8CB204CFDEA0084EC54 /* ItemDetailTV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailTV.swift; sourceTree = "<group>"; };
+		35481F582072A8020072DBDA /* ListLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLayout.swift; sourceTree = "<group>"; };
+		35481F5A2072BFC10072DBDA /* SettingsLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLayout.swift; sourceTree = "<group>"; };
 		354D636220213D1600645A7F /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		354D6364202187C300645A7F /* Bluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth.swift; sourceTree = "<group>"; };
+		354E915F206E7BB70000DAA9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		35579D33202681C3009708BD /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		35579D36202682C9009708BD /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		3593C142201A59A20064DB5F /* ADEM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADEM.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,7 +82,6 @@
 		3593C164201A59A30064DB5F /* ADEMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADEMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3593C168201A59A30064DB5F /* ADEMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADEMUITests.swift; sourceTree = "<group>"; };
 		3593C16A201A59A30064DB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		35A26D49202932FE0035392B /* addProductToTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addProductToTop.swift; sourceTree = "<group>"; };
 		35BA660C206864EC00032B29 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		35E3D2662049E74B0096C557 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		35E3D2692049E9770096C557 /* PeripheralVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralVC.swift; sourceTree = "<group>"; };
@@ -118,6 +122,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		354E915E206E7B970000DAA9 /* Customization */ = {
+			isa = PBXGroup;
+			children = (
+				354E915F206E7BB70000DAA9 /* Color.swift */,
+			);
+			path = Customization;
+			sourceTree = "<group>";
+		};
 		35579D32202681B8009708BD /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +190,7 @@
 		3593C144201A59A20064DB5F /* ADEM */ = {
 			isa = PBXGroup;
 			children = (
+				354E915E206E7B970000DAA9 /* Customization */,
 				35BA660B206864C900032B29 /* Layouts */,
 				35E3D2682049E9190096C557 /* Bluetooth */,
 				35A26D48202932C90035392B /* Extensions */,
@@ -216,7 +229,6 @@
 		35A26D48202932C90035392B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				35A26D49202932FE0035392B /* addProductToTop.swift */,
 				354D6364202187C300645A7F /* Bluetooth.swift */,
 				352739A02041046100516A7C /* CellLayout.swift */,
 			);
@@ -227,6 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				35BA660C206864EC00032B29 /* ListCell.swift */,
+				35481F582072A8020072DBDA /* ListLayout.swift */,
+				35481F5A2072BFC10072DBDA /* SettingsLayout.swift */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -562,10 +576,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				352739A12041046100516A7C /* CellLayout.swift in Sources */,
-				35A26D4A202932FE0035392B /* addProductToTop.swift in Sources */,
+				35481F592072A8020072DBDA /* ListLayout.swift in Sources */,
 				3593C14E201A59A20064DB5F /* ADEM.xcdatamodeld in Sources */,
+				35481F5B2072BFC20072DBDA /* SettingsLayout.swift in Sources */,
 				35BA660D206864EC00032B29 /* ListCell.swift in Sources */,
 				35579D37202682C9009708BD /* DataService.swift in Sources */,
+				354E9160206E7BB70000DAA9 /* Color.swift in Sources */,
 				3593C148201A59A20064DB5F /* ListVC.swift in Sources */,
 				35E3D26A2049E9770096C557 /* PeripheralVC.swift in Sources */,
 				352739A320410BEE00516A7C /* ItemVC.swift in Sources */,

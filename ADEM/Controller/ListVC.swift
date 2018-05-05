@@ -8,6 +8,7 @@
 
 import UIKit
 import ViewAnimator
+import AVFoundation
 
 class ListVC: UIViewController {
 	
@@ -30,10 +31,11 @@ class ListVC: UIViewController {
 //		if let layout = collectionView?.collectionViewLayout as? AdemLayout {
 //			layout.delegate = self
 //		}
-//		
+
+		
+		
 	let animation = AnimationType.from(direction: .top, offset: 30.0)
 	view.animate(animations: [animation])
-		
 	}
 
 	@IBAction func settings(_ sender: Any) {
@@ -47,6 +49,7 @@ class ListVC: UIViewController {
 	}
 
 }
+
 
 
 
