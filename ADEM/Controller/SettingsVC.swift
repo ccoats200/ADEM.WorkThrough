@@ -11,24 +11,53 @@ import CoreBluetooth
 
 
 class SettingsVC: UIViewController {
-	@IBOutlet weak var ConnectedLBL: UILabel!
+	
 	var centralManager: CBCentralManager!
+	
+	//UIElements
+	var connectedLBL = UILabel()
+	var BLESwitch = UISwitch()
+	
 	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		centralManager = CBCentralManager(delegate: self, queue: nil)
+		
+		bluetooth()
+		BLESwitch.addTarget(self, action: #selector(switchStatus(_:)), for: UIControlEvents.valueChanged)
+	}
+	
+	
+	
+	//BluetoothStatus
+	@objc func switchStatus(_ sender: UISwitch) {
+		if sender.isOn {
+			connectedLBL.text = "Connected"
+		} else {
+			connectedLBL.text = "Connect"
+		}
+	}
+	
+
+	
+	func bluetooth() {
+		
+		//Switch
+		BLESwitch.frame = CGRect(x: 0, y: 0, width: 200, height: 21)
+		BLESwitch.center = CGPoint(x: 163, y: 200)
+		self.view.addSubview(BLESwitch)
+
+		//LBL
+		connectedLBL.frame = CGRect(x: 0, y: 0, width: 200, height: 21)
+		connectedLBL.center = CGPoint(x: 160, y: 285)
+		connectedLBL.textAlignment = .center
+		connectedLBL.text = "Connect"
+		self.view.addSubview(connectedLBL)
 	}
 
 	
-	
-	
-	
-	@IBAction func connectSw(_ sender: Any) {
-	}
-    
-
     /*
     // MARK: - Navigation
 

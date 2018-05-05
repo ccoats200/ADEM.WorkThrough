@@ -128,7 +128,7 @@
         <!--ItemVC-->
         <scene sceneID="OG0-nD-LYF">
             <objects>
-                <viewController id="1PX-bW-rwb" customClass="ItemVC" customModule="ADEM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="1PX-bW-rwb" customClass="ItemVC" customModule="ADEM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2es-4J-hMF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -203,28 +203,9 @@
                     <view key="view" contentMode="scaleToFill" id="HgC-yF-h2e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lOh-U9-a8F">
-                                <rect key="frame" x="163" y="200" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="connectSw:" destination="ghj-24-NKr" eventType="valueChanged" id="5tS-vV-4ZY"/>
-                                </connections>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGn-Dr-jIV">
-                                <rect key="frame" x="133" y="317" width="108" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Osm-UM-L8Q"/>
                     </view>
-                    <connections>
-                        <outlet property="ConnectedLBL" destination="jGn-Dr-jIV" id="drI-kR-lq1"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IYh-Il-Bdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -234,7 +215,9 @@
         <scene sceneID="UYs-tX-hgp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Oqk-qJ-VFH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" springLoaded="YES" systemItem="search" id="f65-dw-WRi"/>
+                    <tabBarItem key="tabBarItem" title="" image="Home" selectedImage="Home" springLoaded="YES" id="f65-dw-WRi">
+                        <color key="badgeColor" red="0.02544920006" green="0.80552030460000001" blue="0.0052777091519999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9u6-qt-OZj">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -256,6 +239,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Home" width="42" height="42"/>
         <image name="eggs" width="275" height="183"/>
     </resources>
 </document>
