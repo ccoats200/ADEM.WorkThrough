@@ -27,14 +27,18 @@ class ListVC: UIViewController {
 		productsCollection.delegate = self
 		initProducts()
 		print("Did load views")
-		
+		itemdisplay()
+
 //		if let layout = collectionView?.collectionViewLayout as? AdemLayout {
 //			layout.delegate = self
 //		}
 
+	}
 		
-		
-	let animation = AnimationType.from(direction: .top, offset: 30.0)
+	func itemdisplay() {
+	let topDis = 30
+	//let leftDis = 30
+		let animation = AnimationType.from(direction: .top, offset: CGFloat(topDis))
 	view.animate(animations: [animation])
 	}
 

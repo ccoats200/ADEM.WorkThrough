@@ -9,12 +9,12 @@
 import Foundation
 import UIKit
 
-class itemCell: UICollectionViewCell {
+class codedProductCell: UICollectionViewCell {
 	
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
-		setupViews()
+		//setupViews()
 	}
 	
 	let itemImageView: UIImageView = {
