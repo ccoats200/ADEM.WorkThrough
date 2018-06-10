@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		352739A12041046100516A7C /* CellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352739A02041046100516A7C /* CellLayout.swift */; };
 		352739A320410BEE00516A7C /* ItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352739A220410BEE00516A7C /* ItemVC.swift */; };
 		352BF8CC204CFDEA0084EC54 /* ItemDetailTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352BF8CB204CFDEA0084EC54 /* ItemDetailTV.swift */; };
-		35481F592072A8020072DBDA /* ListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35481F582072A8020072DBDA /* ListLayout.swift */; };
 		35481F5B2072BFC20072DBDA /* SettingsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35481F5A2072BFC10072DBDA /* SettingsLayout.swift */; };
+		354B2A1820CD83BE002AB543 /* ProductCellContentsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B2A1720CD83BE002AB543 /* ProductCellContentsLayout.swift */; };
+		354B2A1A20CD85B4002AB543 /* ProductCellContainerDim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B2A1920CD85B3002AB543 /* ProductCellContainerDim.swift */; };
 		354D636320213D1600645A7F /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354D636220213D1600645A7F /* ProductCell.swift */; };
 		354D6365202187C300645A7F /* Bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354D6364202187C300645A7F /* Bluetooth.swift */; };
 		354E9160206E7BB70000DAA9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354E915F206E7BB70000DAA9 /* Color.swift */; };
@@ -58,11 +58,11 @@
 		0FAB7C24BC31B08AD2A09C24 /* Pods-ADEM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADEM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADEM/Pods-ADEM.debug.xcconfig"; sourceTree = "<group>"; };
 		1E773DA392E4F4DA5AD4C6AF /* Pods_ADEMUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ADEMUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		245909CF130337B03D70A882 /* Pods-ADEMUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADEMUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ADEMUITests/Pods-ADEMUITests.release.xcconfig"; sourceTree = "<group>"; };
-		352739A02041046100516A7C /* CellLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellLayout.swift; sourceTree = "<group>"; };
 		352739A220410BEE00516A7C /* ItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemVC.swift; sourceTree = "<group>"; };
 		352BF8CB204CFDEA0084EC54 /* ItemDetailTV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailTV.swift; sourceTree = "<group>"; };
-		35481F582072A8020072DBDA /* ListLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLayout.swift; sourceTree = "<group>"; };
 		35481F5A2072BFC10072DBDA /* SettingsLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLayout.swift; sourceTree = "<group>"; };
+		354B2A1720CD83BE002AB543 /* ProductCellContentsLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellContentsLayout.swift; sourceTree = "<group>"; };
+		354B2A1920CD85B3002AB543 /* ProductCellContainerDim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellContainerDim.swift; sourceTree = "<group>"; };
 		354D636220213D1600645A7F /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		354D6364202187C300645A7F /* Bluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth.swift; sourceTree = "<group>"; };
 		354E915F206E7BB70000DAA9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -122,6 +122,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		354B2A1B20CD8A32002AB543 /* UIDesign */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIDesign;
+			sourceTree = "<group>";
+		};
 		354E915E206E7B970000DAA9 /* Customization */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +197,7 @@
 		3593C144201A59A20064DB5F /* ADEM */ = {
 			isa = PBXGroup;
 			children = (
+				354B2A1B20CD8A32002AB543 /* UIDesign */,
 				354E915E206E7B970000DAA9 /* Customization */,
 				35BA660B206864C900032B29 /* Layouts */,
 				35E3D2682049E9190096C557 /* Bluetooth */,
@@ -230,7 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				354D6364202187C300645A7F /* Bluetooth.swift */,
-				352739A02041046100516A7C /* CellLayout.swift */,
+				354B2A1920CD85B3002AB543 /* ProductCellContainerDim.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -239,8 +247,8 @@
 			isa = PBXGroup;
 			children = (
 				35BA660C206864EC00032B29 /* ListCell.swift */,
-				35481F582072A8020072DBDA /* ListLayout.swift */,
 				35481F5A2072BFC10072DBDA /* SettingsLayout.swift */,
+				354B2A1720CD83BE002AB543 /* ProductCellContentsLayout.swift */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -575,11 +583,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				352739A12041046100516A7C /* CellLayout.swift in Sources */,
-				35481F592072A8020072DBDA /* ListLayout.swift in Sources */,
 				3593C14E201A59A20064DB5F /* ADEM.xcdatamodeld in Sources */,
 				35481F5B2072BFC20072DBDA /* SettingsLayout.swift in Sources */,
 				35BA660D206864EC00032B29 /* ListCell.swift in Sources */,
+				354B2A1820CD83BE002AB543 /* ProductCellContentsLayout.swift in Sources */,
 				35579D37202682C9009708BD /* DataService.swift in Sources */,
 				354E9160206E7BB70000DAA9 /* Color.swift in Sources */,
 				3593C148201A59A20064DB5F /* ListVC.swift in Sources */,
@@ -589,6 +596,7 @@
 				354D6365202187C300645A7F /* Bluetooth.swift in Sources */,
 				35E3D26C2049E9870096C557 /* CentralVC.swift in Sources */,
 				3593C146201A59A20064DB5F /* AppDelegate.swift in Sources */,
+				354B2A1A20CD85B4002AB543 /* ProductCellContainerDim.swift in Sources */,
 				35579D34202681C3009708BD /* Product.swift in Sources */,
 				35E3D26E2049F4AA0096C557 /* SettingsVC.swift in Sources */,
 				352BF8CC204CFDEA0084EC54 /* ItemDetailTV.swift in Sources */,

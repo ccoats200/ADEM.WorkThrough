@@ -28,7 +28,6 @@ class ListVC: UIViewController {
 		initProducts()
 		print("Did load views")
 		itemdisplay()
-
 //		if let layout = collectionView?.collectionViewLayout as? AdemLayout {
 //			layout.delegate = self
 //		}
