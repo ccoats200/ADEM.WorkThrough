@@ -26,6 +26,9 @@
 		3593C15E201A59A30064DB5F /* ADEMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3593C15D201A59A30064DB5F /* ADEMTests.swift */; };
 		3593C169201A59A30064DB5F /* ADEMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3593C168201A59A30064DB5F /* ADEMUITests.swift */; };
 		35BA660D206864EC00032B29 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BA660C206864EC00032B29 /* ListCell.swift */; };
+		35BB2FFA20FD8C4F00C0F277 /* Product details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BB2FF920FD8C4F00C0F277 /* Product details.swift */; };
+		35BB3003210ABE5800C0F277 /* Design.Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BB3002210ABE5800C0F277 /* Design.Elements.swift */; };
+		35BB3005210ABFA000C0F277 /* ProductCellViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BB3004210ABFA000C0F277 /* ProductCellViewLayout.swift */; };
 		35E3D2672049E74B0096C557 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35E3D2662049E74B0096C557 /* CoreBluetooth.framework */; };
 		35E3D26A2049E9770096C557 /* PeripheralVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E3D2692049E9770096C557 /* PeripheralVC.swift */; };
 		35E3D26C2049E9870096C557 /* CentralVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E3D26B2049E9870096C557 /* CentralVC.swift */; };
@@ -83,6 +86,9 @@
 		3593C168201A59A30064DB5F /* ADEMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADEMUITests.swift; sourceTree = "<group>"; };
 		3593C16A201A59A30064DB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35BA660C206864EC00032B29 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		35BB2FF920FD8C4F00C0F277 /* Product details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product details.swift"; sourceTree = "<group>"; };
+		35BB3002210ABE5800C0F277 /* Design.Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design.Elements.swift; sourceTree = "<group>"; };
+		35BB3004210ABFA000C0F277 /* ProductCellViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellViewLayout.swift; sourceTree = "<group>"; };
 		35E3D2662049E74B0096C557 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		35E3D2692049E9770096C557 /* PeripheralVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralVC.swift; sourceTree = "<group>"; };
 		35E3D26B2049E9870096C557 /* CentralVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralVC.swift; sourceTree = "<group>"; };
@@ -158,6 +164,7 @@
 			children = (
 				354D636220213D1600645A7F /* ProductCell.swift */,
 				352BF8CB204CFDEA0084EC54 /* ItemDetailTV.swift */,
+				35BB3004210ABFA000C0F277 /* ProductCellViewLayout.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -239,6 +246,7 @@
 			children = (
 				354D6364202187C300645A7F /* Bluetooth.swift */,
 				354B2A1920CD85B3002AB543 /* ProductCellContainerDim.swift */,
+				35BB3002210ABE5800C0F277 /* Design.Elements.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -258,6 +266,7 @@
 			children = (
 				35E3D2692049E9770096C557 /* PeripheralVC.swift */,
 				35E3D26B2049E9870096C557 /* CentralVC.swift */,
+				35BB2FF920FD8C4F00C0F277 /* Product details.swift */,
 			);
 			path = Bluetooth;
 			sourceTree = "<group>";
@@ -358,7 +367,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Coleman Coats";
 				TargetAttributes = {
 					3593C141201A59A20064DB5F = {
@@ -584,15 +593,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				3593C14E201A59A20064DB5F /* ADEM.xcdatamodeld in Sources */,
+				35BB3003210ABE5800C0F277 /* Design.Elements.swift in Sources */,
 				35481F5B2072BFC20072DBDA /* SettingsLayout.swift in Sources */,
 				35BA660D206864EC00032B29 /* ListCell.swift in Sources */,
 				354B2A1820CD83BE002AB543 /* ProductCellContentsLayout.swift in Sources */,
 				35579D37202682C9009708BD /* DataService.swift in Sources */,
+				35BB2FFA20FD8C4F00C0F277 /* Product details.swift in Sources */,
 				354E9160206E7BB70000DAA9 /* Color.swift in Sources */,
 				3593C148201A59A20064DB5F /* ListVC.swift in Sources */,
 				35E3D26A2049E9770096C557 /* PeripheralVC.swift in Sources */,
 				352739A320410BEE00516A7C /* ItemVC.swift in Sources */,
 				354D636320213D1600645A7F /* ProductCell.swift in Sources */,
+				35BB3005210ABFA000C0F277 /* ProductCellViewLayout.swift in Sources */,
 				354D6365202187C300645A7F /* Bluetooth.swift in Sources */,
 				35E3D26C2049E9870096C557 /* CentralVC.swift in Sources */,
 				3593C146201A59A20064DB5F /* AppDelegate.swift in Sources */,
@@ -668,6 +680,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -675,6 +688,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -725,6 +739,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -732,6 +747,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

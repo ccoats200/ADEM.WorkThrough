@@ -17,6 +17,9 @@ class settingsLayout: UITableViewController {
 	//TableView information
 	//	let sectionTitles = ["Personal", "Devices", "Payment"]
 	
+	//The User profile image should be v1(44)
+	
+	
 	let twoDimArray = [
 		["Account", "Health information", "Notifications", "Family"],
 		["Bluetooth", "Battery"],

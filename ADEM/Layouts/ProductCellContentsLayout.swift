@@ -1,132 +1,64 @@
+////
+////  ProductCellContentsLayout.swift
+////  ADEM
+////
+////  Created by Coleman Coats on 6/10/18.
+////  Copyright © 2018 Coleman Coats. All rights reserved.
 //
-//  ProductCellContentsLayout.swift
-//  ADEM
 //
-//  Created by Coleman Coats on 6/10/18.
-//  Copyright © 2018 Coleman Coats. All rights reserved.
-
-
-import Foundation
-import UIKit
-
 //
-//class CustomCollecCellDesign: ListVC {
+//import Foundation
+//import UIKit
+//class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+//
+//	let cellID = "product"
+//
+//
 //	override func viewDidLoad() {
 //		super.viewDidLoad()
-//		collectionView?.backgroundColor = UIColor.blue
+//
+//		navigationItem.title = "List"
+//		navigationController?.navigationBar.isTranslucent = false
+//
+//		collectionView?.backgroundColor = UIColor.white
+//
+//		collectionView?.register(productCellLayout.self, forCellWithReuseIdentifier: cellID)
 //	}
-//	
-//	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//		//				let width: CGFloat = 3
-//		//				let spaceBetweenCells: CGFloat = 1
-//		//				let height = (collectionView.bounds.width - (width - 1) * spaceBetweenCells) / width
-//		let width = 120
-//		let height = 150
-//		return CGSize(width: width, height: height)
-//	}
-//	
-//	//MARK: Distance Measurments
-//	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//		return 0
-//	}
-//	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//		return 0
-//	}
-//	
-//	//MARK: Items per section
+//
+//	//Number of cells. update later for collection of cells based on product type
 //	override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//		print("Did account for sections")
-//		return products.count
+//
+//		//Create the right number of cells for the device
+//		return 1
 //	}
-//	
-//	//MARK: Product Cell Contents attributes
+//
+//	//Initiating cell
 //	override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//		
-//		if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as? ProductCell {
-//			let product = products[indexPath.row]
-//			cell.updateViews(product: product)
-//			print("Did account for cell")
-//			collectionView.reloadItems(at: [indexPath])
-//			return cell
-//		}
-//		//		var backgroundColor: UIColor = .blue
-//		//
-//		
-//		return ProductCell()
-//		
-//	}
-//	
-//	//	func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
-//	//		<#code#>
-//	//	}
-//	//	func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
-//	//		<#code#>
-//	//	}
-//	
-//	//	func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-//	//		return
-//	//	}
-//	
-//}
 //
-//class codedProductCell: UICollectionViewCell {
+//		let productCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath)
+//		productCell.backgroundColor = UIColor.rgb(red: 30, green: 188, blue: 29)
+//		productCell.layer.cornerRadius = 5
 //
-//	
-//	override init(frame: CGRect) {
-//		super.init(frame: frame)
-//		setupViews()
+//		print("Rounds corners")
+//		return productCell
 //	}
-//	
-//	let itemImageView: UIImageView = {
-//		let itemImage = UIImageView()
-//		itemImage.backgroundColor = UIColor.blue
-//		itemImage.translatesAutoresizingMaskIntoConstraints = false
-//		return itemImage
-//	}()
-//	
-//	let itemCostView: UILabel = {
-//		let itemCost = UILabel()
-//		itemCost.backgroundColor = UIColor.blue
-//		itemCost.translatesAutoresizingMaskIntoConstraints = false
-//		return itemCost
-//	}()
-//	
-//	let itemNameView: UILabel = {
-//		let itemName = UILabel()
-//		itemName.backgroundColor = UIColor.blue
-//		itemName.translatesAutoresizingMaskIntoConstraints = false
-//		return itemName
-//	}()
-//	
-//	let itemCalView: UILabel = {
-//		let itemCal = UILabel()
-//		itemCal.backgroundColor = UIColor.blue
-//		itemCal.translatesAutoresizingMaskIntoConstraints = false
-//		return itemCal
-//	}()
-//	
-//	
-//	func setupViews() {
-//		addSubview(itemImageView)
-//		addSubview(itemCostView)
-//		addSubview(itemNameView)
-//		addSubview(itemCalView)
-//		
-//	}
-//	
-//	
-//	
-//	required init?(coder aDecoder: NSCoder) {
-//		fatalError("init(coder:) has not been implemented")
-//	}
-//}
 //
-//extension UIView {
-//	func addConstraintsWithFormat(format: String, views: UIView...){
-//		var viewsDictionary = [String: UIView]()
-//		for (index, view) in views.enumerated() {
-//			let key = "v\(index)"
-//			viewsDictionary[key] = view
-//		}
+//	//Size of Cell
+//	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//		//let Columns = 3
+//
+//		//let height = ((view.frame.width/3.2) - 2 - 2) * 9 / 16
+//		//		height + 2 + 129
+//
+//		print("Sets the hight of the cell")
+//		return CGSize(width: view.frame.width/3.2, height: 150 ) //25 points go to the product info (150)
 //	}
+//
+//	//Space between rows
+//	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//		return 10
+//	}
+//
 //}
+
+

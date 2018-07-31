@@ -16,11 +16,13 @@ class DataService {
 	
 	static let instance = DataService()
 	
+	//Product attributes
 	private let item = [
-		Product(title: "Eggs", price: "$\(4.94)", imageName: "eggs.jpeg", cal: "Cal. \(340)"),
+		Product(title: "\(productName)", price: "$\(price)", imageName: "\(image)", cal: "Cal. \(calories)"),
 	]
 	
 	private let Groceries = [Product]()
+	
 	
 	func getGroceryOptions() -> [Product] {
 		return item
