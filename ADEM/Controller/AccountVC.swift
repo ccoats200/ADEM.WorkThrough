@@ -10,7 +10,7 @@ import UIKit
 import CoreBluetooth
 
 
-class SettingsVC: UIViewController {
+class AccountVC: UIViewController {
 	
 	var centralManager: CBCentralManager!
 	
@@ -23,10 +23,8 @@ class SettingsVC: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		centralManager = CBCentralManager(delegate: self, queue: nil)
-		
 		bluetooth()
-		BLESwitch.addTarget(self, action: #selector(switchStatus(_:)), for: UIControlEvents.valueChanged)
+		BLESwitch.addTarget(self, action: #selector(switchStatus(_:)), for: UIControl.Event.valueChanged)
 	}
 	
 	
@@ -39,8 +37,6 @@ class SettingsVC: UIViewController {
 			connectedLBL.text = "Connect"
 		}
 	}
-	
-
 	
 	func bluetooth() {
 		

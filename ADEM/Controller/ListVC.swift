@@ -1,58 +1,249 @@
 //
-//  ViewController.swift
+//  ListVC.swift
 //  ADEM
 //
-//  Created by Coleman Coats on 1/25/18.
+//  Created by Coleman Coats on 8/2/18.
 //  Copyright © 2018 Coleman Coats. All rights reserved.
 //
 
+import Foundation
 import UIKit
-import ViewAnimator
-import AVFoundation
 
-class ListVC: UIViewController {
+
+import Foundation
+import UIKit
+
+
+class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 	
-	@IBOutlet weak var productsCollection: UICollectionView!
+	var products: [itemCellContent]? = {
+		var add = itemCellContent()
+		//add.itemImageName = "addButton"
+		
+		
+		var eggs = itemCellContent()
+		eggs.itemName = "Eggs"
+		eggs.itemImageName = "eggs"
+		eggs.Quantity = "1"
+		
+		var Toast = itemCellContent()
+		Toast.itemName = "Bread"
+		Toast.itemImageName = "bread"
+		Toast.Quantity = "5"
+		
+		var bitch = itemCellContent()
+		bitch.itemName = "Strawberries"
+		bitch.itemImageName = "eggs"
+		bitch.Quantity = "10"
+		
+		var ts = itemCellContent()
+		ts.itemName = "Terriyaki Sauce"
+		ts.itemImageName = "eggs"
+		ts.Quantity = "10"
+		
+		return [eggs, Toast, bitch, ts]
+	}()
 	
-	private(set) public var products = [Product]()
+	//reuse ID's
+	let cellID = "product"
+	let addCellID = "add"
 	
-	//Check out will add a check mark to all items in the list, If you dont want on you uncheck it. at the same time the bottom will raise up to reveal a apple pay logo and the store you want to buy it from. Because you are loged into your rewards program you get the deals and the cash back immediatly.
-	
+	//	func fetchItems() {
+	////		let url = NSURL(string: "https://api.wegmans.io/product/products/{sku}")
+	////
+	////		URLSession.shared.dataTask(with: url!) { (data, response, error) in
+	////			if error != nil {
+	////				print(error)
+	////				return
+	////			}
+	////
+	////			let json = JSONSerialization
+	////			let str = NSString(data: data!, encoding: NSUTF8StringEncoding)
+	////			print(str)
+	////		}.resume()
+	//
+	//		//let params = ["username":"john", "password":"123456"] as Dictionary<String, String>
+	//
+	//		//var request = URLRequest(url: (URL(string: "https://api.wegmans.io/product/products/{sku}")!))
+	//
+	//		var request = URLRequest(url: (URL(string: "https://adem-cfb8f.firebaseio.com/")!))
+	//
+	//		request.httpMethod = "GET"
+	//		request.httpBody = try? JSONSerialization.data(withJSONObject: itemCellContent(), options: [])
+	//		request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+	//
+	//		let session = URLSession.shared
+	//		let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
+	//			print(response!)
+	//			do {
+	//				let json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, AnyObject>
+	//				print(json)
+	//			} catch {
+	//				print("error")
+	//			}
+	//		})
+	//
+	//		task.resume()
+	//
+	//	}
+
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
 		
-		productsCollection.dataSource = self
-		productsCollection.delegate = self
-		initProducts()
-		print("Did load views")
-		itemdisplay()
-//		if let layout = collectionView?.collectionViewLayout as? AdemLayout {
-//			layout.delegate = self
-//		}
-
-	}
+		//fetchItems()
 		
-	func itemdisplay() {
-	let topDis = 30
-	//let leftDis = 30
-		let animation = AnimationType.from(direction: .top, offset: CGFloat(topDis))
-	view.animate(animations: [animation])
-	}
-
-	@IBAction func settings(_ sender: Any) {
+		navigationItem.title = "List"
+		
+		//Left aligned title
+		//let titleTest = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 32, height: view.frame.height))
+		let titleText = UILabel()
+		titleText.text = "List"
+		titleText.font = UIFont(name: "Lato", size: 20)
+		titleText.textColor = UIColor.rgb(red: 30, green: 188, blue: 29)
+		navigationItem.titleView = titleText
+		navigationController?.navigationBar.isTranslucent = false
+		
+		collectionView?.backgroundColor = UIColor.rgb(red: 241, green: 249, blue: 255)
+		
+		collectionView?.register(addProductCell.self, forCellWithReuseIdentifier: addCellID)
+		
+		collectionView?.register(productCellLayout.self, forCellWithReuseIdentifier: cellID)
+		
+		//This moves the Cells to the correct offsets, Stylistic choice
+		collectionView?.contentInset = UIEdgeInsets.init(top: 20, left: 20, bottom: 20, right: 20)
+		collectionView?.scrollIndicatorInsets = UIEdgeInsets.init(top: 0, left: 0, bottom: 50, right: 0)
+		
+		setUpTabBar()
+		setUpNavBarButton()
 		
 	}
 	
-	
-	func initProducts() {
-		products = DataService.instance.getGroceryOptions()
-		print("Did initilize cell")
+	func setUpNavBarButton(){
+		let accountImage = UIBarButtonItem(image: UIImage(named: "account")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleAccount))
+		
+		let settingsImage = UIBarButtonItem(image: UIImage(named: "Settings")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleSettings))
+		
+		navigationItem.leftBarButtonItem = accountImage
+		navigationItem.rightBarButtonItem = settingsImage
 	}
-
+	
+	//Account Button
+	@objc func handleAccount() {
+		let aController = AccountVC()
+		self.present(aController, animated: true, completion: nil)
+		print(123)
+	}
+	
+	//Settings Button
+	@objc func handleSettings() {
+		print(123)
+	}
+	
+	
+	let tabBar: TabBar = {
+		let tB = TabBar()
+		return tB
+		//This needs to be fixed so it doesn't scroll
+	}()
+	
+	private func setUpTabBar() {
+		view.addSubview(tabBar)
+		
+		view.addConstraintsWithFormats(format: "H:|[v0]|", views: tabBar)
+		view.addConstraintsWithFormats(format: "V:[v0(70)]|", views: tabBar)
+	}
+	
+	//Number of cells. update later for collection of cells based on product type
+	override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+		if let _ = products {
+			return products!.count + 1
+			//return (products?.count)! + 1
+		}
+		return 1
+	}
+	
+	//Initiating cell
+	override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		
+		//		switch indexPath.item {
+		//		case 0:
+		//			let newCell = collectionView.dequeueReusableCell(withReuseIdentifier: addCellID, for: indexPath) as! addProductCell
+		//
+		//			print("Rounds corners")
+		//
+		//			return newCell
+		//		default:
+		//			let productCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! productCellLayout
+		//			productCell.backgroundColor = UIColor.rgb(red: 252, green: 252, blue: 252) //off white blue color
+		//			productCell.layer.cornerRadius = 5
+		//			print("Rounds corners")
+		//
+		//			productCell.gItem = products[indexPath.item]
+		//
+		//			//collectionview.insertIems(at: indexPaths)
+		//
+		//			//Shadow
+		//			productCell.layer.shadowColor = UIColor.gray.cgColor
+		//			productCell.layer.shadowOffset = CGSize(width: 0, height: 3.0)
+		//			productCell.layer.shadowOpacity = 0.7
+		//			productCell.layer.shadowRadius = 2.0
+		//			productCell.layer.masksToBounds = false
+		//			productCell.layer.shadowPath = UIBezierPath(roundedRect: productCell.bounds, cornerRadius: productCell.contentView.layer.cornerRadius).cgPath;
+		//			return productCell
+		//		}
+		
+		
+		
+		
+		if indexPath.item == 0
+		{
+			let newCell = collectionView.dequeueReusableCell(withReuseIdentifier: addCellID, for: indexPath) as! addProductCell
+			
+			
+			print("Rounds corners")
+			
+			return newCell
+		} else {
+			let productCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! productCellLayout
+			productCell.backgroundColor = UIColor.rgb(red: 252, green: 252, blue: 252) //off white blue color
+			productCell.layer.cornerRadius = 5
+			print("Rounds corners")
+			
+			productCell.gItem = products![indexPath.item - 1]
+			
+			//collectionview.insertIems(at: indexPaths)
+			
+			//Shadow
+			productCell.layer.shadowColor = UIColor.gray.cgColor
+			productCell.layer.shadowOffset = CGSize(width: 0, height: 3.0)
+			productCell.layer.shadowOpacity = 0.7
+			productCell.layer.shadowRadius = 2.0
+			productCell.layer.masksToBounds = false
+			productCell.layer.shadowPath = UIBezierPath(roundedRect: productCell.bounds, cornerRadius: productCell.contentView.layer.cornerRadius).cgPath;
+			return productCell
+		}
+	}
+	
+	
+	//Size of Cell
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+		//let Columns = 3
+		//let height = ((view.frame.width/3.2) - 2 - 2) * 9 / 16
+		//height + 2 + 129
+		
+		print("Sets the hight of the cell")
+		let sizeofCell = CGSize(width: view.frame.width / 3.6, height: 125 ) //25 points go to the product info (150)
+		return sizeofCell
+	}
+	
+	//Space between rows
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+		return 25
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+		return 0
+	}
+	
 }
-
-
-
-

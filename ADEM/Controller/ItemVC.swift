@@ -21,9 +21,9 @@ class ItemVC: UIViewController {
     }
 
 
-	func updateImage(product: Product){
-		item.image = UIImage(named: product.imageName)
-	}
+//	func updateImage(product: Product){
+//		item.image = UIImage(named: product.imageName)
+//	}
 	
 
     /*

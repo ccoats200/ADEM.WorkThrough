@@ -8,15 +8,14 @@
 
 import Foundation
 import UIKit
-
-//Color Converter
+//Color Extension
 extension UIColor {
 	static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
 		return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
 	}
 }
 
-//Constraints formating
+//Constraints Extension
 extension UIView {
 	func addConstraintsWithFormats(format: String, views: UIView...) {
 		var viewsDictionary = [String: UIView]()
@@ -25,7 +24,21 @@ extension UIView {
 			view.translatesAutoresizingMaskIntoConstraints = false
 			viewsDictionary[key] = view
 		}
-		addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutFormatOptions(), metrics: nil, views: viewsDictionary))
+		addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: viewsDictionary))
 	}
 }
 
+//SuperClass Collection View Cell
+class CellBasics: UICollectionViewCell {
+	override init(frame: CGRect) {
+		super.init(frame: frame)
+		setupViews()
+	}
+	
+	func setupViews() {
+	}
+	
+	required init?(coder aDecoder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
+}

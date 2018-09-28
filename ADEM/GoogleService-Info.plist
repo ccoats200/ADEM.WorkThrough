@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>288594092060-qgpabhoufupu3nvq1sh16si841201hrg.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.288594092060-qgpabhoufupu3nvq1sh16si841201hrg</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBANJ4i00-pR6kgfA9enR9OVMSXMl7E5eg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>288594092060</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Beta.ADEM</string>
+	<key>PROJECT_ID</key>
+	<string>adem-cfb8f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>adem-cfb8f.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:288594092060:ios:e81f1b3016e81ca0</string>
+	<key>DATABASE_URL</key>
+	<string>https://adem-cfb8f.firebaseio.com</string>
+</dict>
+</plist>

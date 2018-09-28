@@ -12,22 +12,22 @@ import CoreBluetooth
 
 //central = [[CBCentralManager alloca], initWithDelegate: self queue: nil options: nil];
 
-class DataService {
-	
-	static let instance = DataService()
-	
-	//Product attributes
-	private let item = [
-		Product(title: "\(productName)", price: "$\(price)", imageName: "\(image)", cal: "Cal. \(calories)"),
-	]
-	
-	private let Groceries = [Product]()
-	
-	
-	func getGroceryOptions() -> [Product] {
-		return item
-	}
-}
+//class DataService {
+//	
+//	static let instance = DataService()
+//	
+//	//Product attributes
+//	private let item = [
+//		Product(title: "\(itemName)", price: "$\(cost)", imageName: "\(images)", cal: "Cal. \(calories)"),
+//	]
+//	
+//	private let Groceries = [Product]()
+//	
+//	
+//	func getGroceryOptions() -> [Product] {
+//		return item
+//	}
+//}
 
 //Pull the localName and manufacturing Data out of the advertising data
 //NSString *localName = [advertisementData objectForKey:CBAdvertisementDataLocalNameKey];

@@ -25,13 +25,13 @@ class ProductCell: UICollectionViewCell {
 
 	
 	
-	func updateViews(product: Product){
-		itemImage.image = UIImage(named: product.imageName)
-		productName.text = product.title
-		calCount.text = product.cal
-		productPrice.text = product.price
-	}
-	
+//	func updateViews(product: Product){
+//		itemImage.image = UIImage(named: product.imageName)
+//		productName.text = product.title
+//		calCount.text = product.cal
+//		productPrice.text = product.price
+//	}
+//	
 }
 
 

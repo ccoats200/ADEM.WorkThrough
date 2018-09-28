@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Firebase
 import CoreData
-import ChameleonFramework
+
 
 //MARK: Important
 /*Remember to ignore Firebase and private info. see https://help.github.com/articles/ignoring-files/
@@ -19,17 +20,49 @@ import ChameleonFramework
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
+	
 
 
-	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-		// Override point for customization after application launch.
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+		window = UIWindow(frame: UIScreen.main.bounds)
+		window?.makeKeyAndVisible()
 		
-		//Mark: Allows for programatically entered UI elements
-//		window = UIWindow(frame: UIScreen.main.bounds)
-//		window?.makeKeyAndVisible()
-//
-//		let layout = UICollectionViewFlowLayout()
-//		window?.rootViewController = UINavigationController(rootViewController: ListVC(collectionViewLayout: layout))
+		FirebaseApp.configure()
+		
+		//		let settingsController = settingsLayout(collectionViewLayout: UICollectionViewFlowLayout())
+		//		window?.rootViewController = UINavigationController(rootViewController: settingsController)
+		//		return true
+		
+		//		let settingsController = CustomCollecCellDesign(collectionViewLayout: UICollectionViewFlowLayout())
+		//		window?.rootViewController = UINavigationController(rootViewController: settingsController)
+		
+		let layout = UICollectionViewFlowLayout()
+		window?.rootViewController = UINavigationController(rootViewController: CustomCollecCellDesign(collectionViewLayout: layout))
+		
+		UINavigationBar.appearance().barTintColor = UIColor.rgb(red: 255, green: 255, blue: 255)
+		
+		//Removes the shadow under the Nav bar
+		UINavigationBar.appearance().shadowImage = UIImage()
+		UINavigationBar.appearance().backgroundImage(for: UIBarMetrics.default)
+		
+		print("Blue Color Created")
+		
+		// to set the below watch https://www.youtube.com/watch?v=APQVltARKF8&list=PL0dzCUj1L5JGKdVUtA5xds1zcyzsz7HLj&index=2 at time 20:00
+
+		var preferredStatusBarStyle : UIStatusBarStyle {
+			return .default
+		}
+		
+		//application.statusBarStyle = .default
+		let statusBarBackgroundColor = UIView()
+		statusBarBackgroundColor.backgroundColor = UIColor.rgb(red: 255, green: 255, blue: 255)
+		window?.addSubview(statusBarBackgroundColor)
+		window?.addConstraintsWithFormats(format: "H:|[v0]|", views: statusBarBackgroundColor)
+		window?.addConstraintsWithFormats(format: "V:|[v0(20)]|", views: statusBarBackgroundColor)
+		
+		//Firestore
+		//let db = Firestore.firestore()
+		
 		return true
 	}
 

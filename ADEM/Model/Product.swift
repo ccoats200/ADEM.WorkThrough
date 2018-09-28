@@ -7,17 +7,49 @@
 //
 
 import Foundation
+import UIKit
 
-struct Product {
-	private(set) public var title: String
-	private(set) public var price: String
-	private(set) public var imageName: String
-	private(set) public var cal: String
+class itemCellContent: NSObject {
 	
-	init(title: String, price: String, imageName: String, cal: String) {
-		self.title = title
-		self.price = price
-		self.imageName = imageName
-		self.cal = cal
-	}
+	
+	var addItemButtonImage: String?
+	var itemImageName: String?
+	var itemName: String?
+	var Quantity: String?
 }
+//
+//let itemName = "Eggs"
+//let cost = 4.99
+//let calories = 340
+//let images = "eggs.jpeg"
+//let quantity = "\(1)"
+//
+
+
+
+//
+//
+//struct itemCellContents: Decodable {
+//
+//	let addItemButtonImage: String?
+//	let itemImageName: String?
+//	let itemName: String?
+//	let Quantity: String?
+//}
+
+
+
+
+//struct Product {
+//	private(set) public var title: String
+//	private(set) public var price: String
+//	private(set) public var imageName: String
+//	private(set) public var cal: String
+//
+//	init(title: String, price: String, imageName: String, cal: String) {
+//		self.title = title
+//		self.price = price
+//		self.imageName = imageName
+//		self.cal = cal
+//	}
+//}
