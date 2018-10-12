@@ -17,6 +17,16 @@ class itemCellContent: NSObject {
 	var itemName: String?
 	var Quantity: String?
 }
+
+class accountContent: NSObject {
+	
+	
+	var profileImage: String?
+	var devices: String?
+	var family: String?
+	var allergies: String?
+}
+
 //
 //let itemName = "Eggs"
 //let cost = 4.99

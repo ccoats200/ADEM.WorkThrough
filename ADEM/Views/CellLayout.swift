@@ -20,15 +20,13 @@ class addProductCell: CellBasics {
 		addItemButtonImage.layer.masksToBounds = true
 		print("Created the add button")
 		
+		
 		return addItemButtonImage
 	}()
 	
 	override func setupViews() {
 		addSubview(addItem)
 		setUpAddButton()
-		
-		
-		addItem.addGestureRecognizer(UITapGestureRecognizer(target: addProductCell.self, action: #selector(handleAdd)))
 		
 		addConstraintsWithFormats(format: "H:|[v0]|", views: addItem)
 		addConstraintsWithFormats(format: "V:|[v0]|", views: addItem)
@@ -43,7 +41,7 @@ class addProductCell: CellBasics {
 	}
 }
 
-//Product
+//HomePage Product Cell layout
 class productCellLayout: CellBasics {
 	
 	var gItem: itemCellContent? {
@@ -51,7 +49,6 @@ class productCellLayout: CellBasics {
 			productImageView.image = UIImage(named: (gItem?.itemImageName)!)
 			productName.text = gItem?.itemName
 			quantity.text = gItem?.Quantity
-			
 			
 			print("set")
 		}

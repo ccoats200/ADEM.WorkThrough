@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		352739A320410BEE00516A7C /* ItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352739A220410BEE00516A7C /* ItemVC.swift */; };
-		352A76DF215DA6400018E3AB /* accountLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352A76DE215DA6400018E3AB /* accountLayout.swift */; };
+		352739A320410BEE00516A7C /* ItemVC1.0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352739A220410BEE00516A7C /* ItemVC1.0.swift */; };
+		352A76DF215DA6400018E3AB /* profileLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352A76DE215DA6400018E3AB /* profileLayout.swift */; };
 		35481F5B2072BFC20072DBDA /* SettingsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35481F5A2072BFC10072DBDA /* SettingsLayout.swift */; };
 		354D636320213D1600645A7F /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354D636220213D1600645A7F /* ProductCell.swift */; };
 		354E9160206E7BB70000DAA9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354E915F206E7BB70000DAA9 /* Color.swift */; };
@@ -24,6 +24,10 @@
 		3593C153201A59A20064DB5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3593C151201A59A20064DB5F /* LaunchScreen.storyboard */; };
 		3593C15E201A59A30064DB5F /* ADEMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3593C15D201A59A30064DB5F /* ADEMTests.swift */; };
 		3593C169201A59A30064DB5F /* ADEMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3593C168201A59A30064DB5F /* ADEMUITests.swift */; };
+		35A0357A2164723A00203087 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A035792164723A00203087 /* SettingsVC.swift */; };
+		35A0357C2164742D00203087 /* ItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A0357B2164742D00203087 /* ItemVC.swift */; };
+		35A035FC216D861600203087 /* ItemLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A035FB216D861600203087 /* ItemLayout.swift */; };
+		35A035FE216D892E00203087 /* settingsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A035FD216D892E00203087 /* settingsLayout.swift */; };
 		35BB3003210ABE5800C0F277 /* Design.Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BB3002210ABE5800C0F277 /* Design.Elements.swift */; };
 		35CE51962151F48A00BAAA38 /* Cloud Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CE51952151F48A00BAAA38 /* Cloud Storage.swift */; };
 		35E3D2672049E74B0096C557 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35E3D2662049E74B0096C557 /* CoreBluetooth.framework */; };
@@ -58,8 +62,8 @@
 		0FAB7C24BC31B08AD2A09C24 /* Pods-ADEM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADEM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADEM/Pods-ADEM.debug.xcconfig"; sourceTree = "<group>"; };
 		1E773DA392E4F4DA5AD4C6AF /* Pods_ADEMUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ADEMUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		245909CF130337B03D70A882 /* Pods-ADEMUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADEMUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ADEMUITests/Pods-ADEMUITests.release.xcconfig"; sourceTree = "<group>"; };
-		352739A220410BEE00516A7C /* ItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemVC.swift; sourceTree = "<group>"; };
-		352A76DE215DA6400018E3AB /* accountLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accountLayout.swift; sourceTree = "<group>"; };
+		352739A220410BEE00516A7C /* ItemVC1.0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemVC1.0.swift; sourceTree = "<group>"; };
+		352A76DE215DA6400018E3AB /* profileLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileLayout.swift; sourceTree = "<group>"; };
 		35481F5A2072BFC10072DBDA /* SettingsLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLayout.swift; sourceTree = "<group>"; };
 		354D636220213D1600645A7F /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		354E915F206E7BB70000DAA9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -81,6 +85,10 @@
 		3593C164201A59A30064DB5F /* ADEMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADEMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3593C168201A59A30064DB5F /* ADEMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADEMUITests.swift; sourceTree = "<group>"; };
 		3593C16A201A59A30064DB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35A035792164723A00203087 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		35A0357B2164742D00203087 /* ItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemVC.swift; sourceTree = "<group>"; };
+		35A035FB216D861600203087 /* ItemLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemLayout.swift; sourceTree = "<group>"; };
+		35A035FD216D892E00203087 /* settingsLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsLayout.swift; sourceTree = "<group>"; };
 		35BB3002210ABE5800C0F277 /* Design.Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design.Elements.swift; sourceTree = "<group>"; };
 		35CE51952151F48A00BAAA38 /* Cloud Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cloud Storage.swift"; sourceTree = "<group>"; };
 		35E3D2662049E74B0096C557 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
@@ -145,7 +153,9 @@
 				354D636220213D1600645A7F /* ProductCell.swift */,
 				356DB9E32113E0DE00B4544C /* tabBar.swift */,
 				35E5AE1E214B3D8300D193BA /* CellLayout.swift */,
-				352A76DE215DA6400018E3AB /* accountLayout.swift */,
+				352A76DE215DA6400018E3AB /* profileLayout.swift */,
+				35A035FB216D861600203087 /* ItemLayout.swift */,
+				35A035FD216D892E00203087 /* settingsLayout.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -153,10 +163,12 @@
 		35579D3920268A22009708BD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				352739A220410BEE00516A7C /* ItemVC.swift */,
+				352739A220410BEE00516A7C /* ItemVC1.0.swift */,
 				356DB9E721192BC400B4544C /* Settings.swift */,
 				35E3D26D2049F4AA0096C557 /* AccountVC.swift */,
 				356DB9E12113E06700B4544C /* ListVC.swift */,
+				35A035792164723A00203087 /* SettingsVC.swift */,
+				35A0357B2164742D00203087 /* ItemVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -509,6 +521,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35A0357A2164723A00203087 /* SettingsVC.swift in Sources */,
 				356DB9E22113E06700B4544C /* ListVC.swift in Sources */,
 				3593C14E201A59A20064DB5F /* ADEM.xcdatamodeld in Sources */,
 				35BB3003210ABE5800C0F277 /* Design.Elements.swift in Sources */,
@@ -517,10 +530,13 @@
 				35E5AE1F214B3D8300D193BA /* CellLayout.swift in Sources */,
 				354E9160206E7BB70000DAA9 /* Color.swift in Sources */,
 				356DB9E42113E0DE00B4544C /* tabBar.swift in Sources */,
-				352739A320410BEE00516A7C /* ItemVC.swift in Sources */,
-				352A76DF215DA6400018E3AB /* accountLayout.swift in Sources */,
+				352739A320410BEE00516A7C /* ItemVC1.0.swift in Sources */,
+				35A035FC216D861600203087 /* ItemLayout.swift in Sources */,
+				352A76DF215DA6400018E3AB /* profileLayout.swift in Sources */,
 				354D636320213D1600645A7F /* ProductCell.swift in Sources */,
 				3593C146201A59A20064DB5F /* AppDelegate.swift in Sources */,
+				35A035FE216D892E00203087 /* settingsLayout.swift in Sources */,
+				35A0357C2164742D00203087 /* ItemVC.swift in Sources */,
 				35579D34202681C3009708BD /* Product.swift in Sources */,
 				35E3D26E2049F4AA0096C557 /* AccountVC.swift in Sources */,
 				35CE51962151F48A00BAAA38 /* Cloud Storage.swift in Sources */,

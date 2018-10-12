@@ -1,5 +1,5 @@
 //
-//  ItemVC.swift
+//  SettingsVC.swift
 //  ADEM
 //
 //  Created by Coleman Coats on 10/2/18.
@@ -12,27 +12,15 @@ import CoreBluetooth
 
 
 
-//class productViewC: NSObject {
-//	func showProduct() {
-//		print("Showing Product VC")
-//		
-//		if let keyWindow = UIApplication.shared.keyWindow {
-//			let view = UIView(frame: keyWindow.frame)
-//			view.backgroundColor = UIColor.red
-//			
-//			
-//			keyWindow.addSubview(view)
-//			
-//		}
-//	}
-//}
-
-class ProductVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class SettingsVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 	
 	//var centralManager: CBCentralManager!
 	
 	//Reuse ID's
-	let productForVC = "Product"
+	let profileSection = "Profile"
+	let users = "Kitchen Staff"
+	let devices = "Devices"
+	let restrictions = "Allergies"
 	
 	//UIElements
 	//var connectedLBL = UILabel()
@@ -43,18 +31,20 @@ class ProductVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		//navigationItem.title = "Productssss"
+		//navigationItem.title = "Profile"
 		
-		let productName = UILabel()
-		productName.text = "Product"
-		productName.font = UIFont(name: "Lato", size: 20)
-		productName.textColor = UIColor.rgb(red: 30, green: 188, blue: 29)
-		navigationItem.titleView = productName
+		
+		
+		let acctText = UILabel()
+		acctText.text = "Settings"
+		acctText.font = UIFont(name: "Lato", size: 20)
+		acctText.textColor = UIColor.rgb(red: 30, green: 188, blue: 29)
+		navigationItem.titleView = acctText
 		navigationController?.navigationBar.isTranslucent = false
 		
 		collectionView?.backgroundColor = UIColor.rgb(red: 241, green: 249, blue: 255)
 		
-		collectionView?.register(ItemLayout.self, forCellWithReuseIdentifier: productForVC)
+		collectionView?.register(settingsCell.self, forCellWithReuseIdentifier: profileSection)
 		
 		//This moves the Cells to the correct offsets, Stylistic choice
 		collectionView?.contentInset = UIEdgeInsets.init(top: 20, left: 20, bottom: 20, right: 20)
@@ -69,12 +59,13 @@ class ProductVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
 	
 	func setUpNavBarButto(){
 		
-		
 		//let accountImage = UIBarButtonItem(image: UIImage(named: "account")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(home))
+		
 		_ = UIBarButtonItem(image: UIImage(named: "account")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(home))
 		
-		//navigationItem.leftBarButtonItem = accountImage
 		navigationItem.leftItemsSupplementBackButton = true
+		
+		//navigationItem.leftBarButtonItem = accountImage
 	}
 	
 	//Account Button
@@ -87,6 +78,7 @@ class ProductVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
 	
 	override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		
+		
 		return 1
 	}
 	
@@ -94,7 +86,7 @@ class ProductVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
 	//Cell at row
 	override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		
-		let profileCell = collectionView.dequeueReusableCell(withReuseIdentifier: productForVC, for: indexPath) as! ItemLayout
+		let profileCell = collectionView.dequeueReusableCell(withReuseIdentifier: profileSection, for: indexPath) as! settingsCell
 		/*
 		profileCell.backgroundColor = UIColor.rgb(red: 252, green: 252, blue: 252) //off white blue color
 		profileCell.layer.cornerRadius = 5
@@ -114,8 +106,8 @@ class ProductVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		let sizeofItemCell = CGSize(width: view.frame.width, height: 125)
-		return sizeofItemCell
+		let sizeofAccountCell = CGSize(width: view.frame.width, height: 125)
+		return sizeofAccountCell
 	}
 	
 	//Space between rows

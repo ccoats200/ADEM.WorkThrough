@@ -13,8 +13,14 @@ import UIKit
 import Foundation
 import UIKit
 
+protocol TapDelegate {
+	func selectedProduct(products: itemCellContent)
+
+}
 
 class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+	
+
 	
 	var products: [itemCellContent]? = {
 		var add = itemCellContent()
@@ -36,12 +42,7 @@ class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelega
 		bitch.itemImageName = "eggs"
 		bitch.Quantity = "10"
 		
-		var ts = itemCellContent()
-		ts.itemName = "Terriyaki Sauce"
-		ts.itemImageName = "eggs"
-		ts.Quantity = "10"
-		
-		return [eggs, Toast, bitch, ts]
+		return [eggs, Toast, bitch]
 	}()
 	
 	//reuse ID's
@@ -117,9 +118,16 @@ class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelega
 		setUpTabBar()
 		setUpNavBarButton()
 		
+		let Columns: CGFloat = 3.0
+		let insetDimension: CGFloat = 20.0
+		let cellHeight: CGFloat = 125.0
+		let cellWidth = (collectionView.frame.width/Columns) - insetDimension
+		let layouts = collectionViewLayout as! UICollectionViewFlowLayout
+		layouts.itemSize = CGSize(width: cellWidth, height: cellHeight)
+		
 	}
 	
-	func setUpNavBarButton(){
+	func setUpNavBarButton() {
 		let accountImage = UIBarButtonItem(image: UIImage(named: "account")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleAccount))
 		
 		let settingsImage = UIBarButtonItem(image: UIImage(named: "Settings")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleSettings))
@@ -130,16 +138,35 @@ class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelega
 	
 	//Account Button
 	@objc func handleAccount() {
-		let aController = AccountVC()
-		self.present(aController, animated: true, completion: nil)
-		print(123)
+		
+		let aController = AccountVC(collectionViewLayout: UICollectionViewFlowLayout())
+		self.navigationController?.pushViewController(aController, animated: true)
+		//self.present(aController, animated: true, completion: nil)
+		print("Acccount tab is active")
 	}
 	
 	//Settings Button
 	@objc func handleSettings() {
-		print(123)
+		
+		let aController = SettingsVC(collectionViewLayout: UICollectionViewFlowLayout())
+		self.navigationController?.pushViewController(aController, animated: true)
+		print("Settings Tab is active")
 	}
 	
+	
+	@objc func handleProduct() {
+
+		let cController = ProductVC(collectionViewLayout: UICollectionViewFlowLayout())
+		self.navigationController?.pushViewController(cController, animated: true)
+		print("Settings Tab is active")
+	}
+	
+	@objc func handleSearch() {
+		
+		let cController = ProductVC(collectionViewLayout: UICollectionViewFlowLayout())
+		self.navigationController?.pushViewController(cController, animated: true)
+		print("Settings Tab is active")
+	}
 	
 	let tabBar: TabBar = {
 		let tB = TabBar()
@@ -166,41 +193,12 @@ class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelega
 	//Initiating cell
 	override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		
-		//		switch indexPath.item {
-		//		case 0:
-		//			let newCell = collectionView.dequeueReusableCell(withReuseIdentifier: addCellID, for: indexPath) as! addProductCell
-		//
-		//			print("Rounds corners")
-		//
-		//			return newCell
-		//		default:
-		//			let productCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! productCellLayout
-		//			productCell.backgroundColor = UIColor.rgb(red: 252, green: 252, blue: 252) //off white blue color
-		//			productCell.layer.cornerRadius = 5
-		//			print("Rounds corners")
-		//
-		//			productCell.gItem = products[indexPath.item]
-		//
-		//			//collectionview.insertIems(at: indexPaths)
-		//
-		//			//Shadow
-		//			productCell.layer.shadowColor = UIColor.gray.cgColor
-		//			productCell.layer.shadowOffset = CGSize(width: 0, height: 3.0)
-		//			productCell.layer.shadowOpacity = 0.7
-		//			productCell.layer.shadowRadius = 2.0
-		//			productCell.layer.masksToBounds = false
-		//			productCell.layer.shadowPath = UIBezierPath(roundedRect: productCell.bounds, cornerRadius: productCell.contentView.layer.cornerRadius).cgPath;
-		//			return productCell
-		//		}
-		
-		
-		
-		
 		if indexPath.item == 0
 		{
 			let newCell = collectionView.dequeueReusableCell(withReuseIdentifier: addCellID, for: indexPath) as! addProductCell
+			//New item
 			
-			
+				
 			print("Rounds corners")
 			
 			return newCell
@@ -226,16 +224,44 @@ class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelega
 	}
 	
 	
+	//Lets Build that app ep.16
+//	override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//		let Prod = productViewC()
+//		Prod.showProduct()
+//	}
+	
+	override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		_ = addProductCell.self
+
+		_ = 0
+		handleProduct()
+		print("123")
+	}
+	
+	
+	/*
 	//Size of Cell
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		//let Columns = 3
+		let Columns: CGFloat = 3.0
 		//let height = ((view.frame.width/3.2) - 2 - 2) * 9 / 16
 		//height + 2 + 129
-		
 		print("Sets the hight of the cell")
-		let sizeofCell = CGSize(width: view.frame.width / 3.6, height: 125 ) //25 points go to the product info (150)
+		
+		
+		
+		
+		
+		//let cellWidth = collectionView.bounds.width/3.6
+		//let cellHeight: CGFloat = 125
+		
+		
+		//let widths = self.view.frame.width
+		//view.frame.width / 3.6
+	
+		//let sizeofCell = CGSize(width: cellWidth, height: cellHeight) //25 points go to the product info (150)
 		return sizeofCell
 	}
+	*/
 	
 	//Space between rows
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -245,5 +271,4 @@ class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelega
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
 		return 0
 	}
-	
 }

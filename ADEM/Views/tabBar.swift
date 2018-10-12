@@ -95,6 +95,7 @@ class tabCell: CellBasics {
 		didSet {
 			tabButtonView.tintColor = isSelected  ? UIColor.rgb(red: 59, green: 125, blue: 121) : UIColor.rgb(red: 54, green: 147, blue: 111)
 			print("Tab bar item is selected")
+		
 		}
 	}
 	

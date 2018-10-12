@@ -36,8 +36,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		//		let settingsController = CustomCollecCellDesign(collectionViewLayout: UICollectionViewFlowLayout())
 		//		window?.rootViewController = UINavigationController(rootViewController: settingsController)
 		
+		
+		let Account = AccountVC()
 		let layout = UICollectionViewFlowLayout()
+		//window?.rootViewController = UINavigationController(rootViewController: AccountVC(collectionViewLayout: layout))
 		window?.rootViewController = UINavigationController(rootViewController: CustomCollecCellDesign(collectionViewLayout: layout))
+		
+		
 		
 		UINavigationBar.appearance().barTintColor = UIColor.rgb(red: 255, green: 255, blue: 255)
 		
@@ -59,7 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		window?.addSubview(statusBarBackgroundColor)
 		window?.addConstraintsWithFormats(format: "H:|[v0]|", views: statusBarBackgroundColor)
 		window?.addConstraintsWithFormats(format: "V:|[v0(20)]|", views: statusBarBackgroundColor)
-		
+	
 		//Firestore
 		//let db = Firestore.firestore()
 		
