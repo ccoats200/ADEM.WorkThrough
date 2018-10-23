@@ -20,7 +20,7 @@ class itemCellContent: NSObject {
 
 class accountContent: NSObject {
 	
-	
+	var personName: String?
 	var profileImage: String?
 	var devices: String?
 	var family: String?

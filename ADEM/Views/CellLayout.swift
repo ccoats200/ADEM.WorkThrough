@@ -87,18 +87,10 @@ class productCellLayout: CellBasics {
 		return Quant
 	}()
 	
-	let seperatorView: UIView = {
-		let seperator = UIView()
-		seperator.backgroundColor = UIColor.rgb(red: 230, green: 230, blue: 230)
-		print("sets the seperator color")
-		return seperator
-	}()
 	
 	override func setupViews() {
 		addSubview(productImageView)
 		print("adds the product image subview")
-		addSubview(seperatorView)
-		print("adds the seperator subview")
 		addSubview(productName)
 		print("adds the product name subview")
 		addSubview(quantity)
@@ -110,11 +102,9 @@ class productCellLayout: CellBasics {
 		//addConstraintsWithFormats(format: "H:|-3-[v0]-3-[v1(50)]-8-[v2(40)]", views: productName, price, Quantity)
 		
 		//Vertical Constraints (productImageView = 105)
-		addConstraintsWithFormats(format: "V:|-2-[v0(100)]-1-[v1(20)]-3-[v2(1)]|", views: productImageView, productName, seperatorView)
+		addConstraintsWithFormats(format: "V:|-2-[v0(100)]-1-[v1(20)]-3-|", views: productImageView, productName)
 		//addConstraintsWithFormats(format: "V:|-3-[v0(105)]-4-[v1(20)]-8-[v2(1)]|", views: productImageView, productName, seperatorView)
 		
-		//Seperator Constaint
-		addConstraintsWithFormats(format: "H:|[v0]|", views: seperatorView)
 		
 		//Constraints: Only use if multiple constraints needed on same view
 		

@@ -16,6 +16,7 @@ class AccountVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
 	//var centralManager: CBCentralManager!
 	
 	//Reuse ID's
+	
 	let profileSection = "Profile"
 	let users = "Kitchen Staff"
 	let devices = "Devices"
@@ -31,13 +32,11 @@ class AccountVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
 		var profile = accountContent()
 		//add.itemImageName = "addButton"
 		
-		var profImage = accountContent()
-		profImage.profileImage = "Eggs"
-		profImage.devices = "eggs"
-		profImage.family = "1"
-		profImage.allergies = "2"
+		//Stuff To be implemented from user
+		var profName = accountContent()
+		profName.personName = "Coleman"
 		
-		return [profImage]
+		return [profName]
 		
 	}()
 	
@@ -55,6 +54,8 @@ class AccountVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
 		navigationItem.titleView = acctText
 		navigationController?.navigationBar.isTranslucent = false
 		
+		//collectionView?.backgroundColor = UIColor.rgb(red: 30, green: 188, blue: 28)
+
 		collectionView?.backgroundColor = UIColor.rgb(red: 241, green: 249, blue: 255)
 		
 		collectionView?.register(AccountCell.self, forCellWithReuseIdentifier: profileSection)
@@ -74,10 +75,13 @@ class AccountVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
 	func setUpNavBarButto(){
 		
 	
+		let settingsImage = UIBarButtonItem(image: UIImage(named: "Settings")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleSettings))
 		
-		let accountImage = UIBarButtonItem(image: UIImage(named: "account")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(home))
+		
+		let accountImage = UIBarButtonItem(image: UIImage(named: "AccountIcon")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(home))
 		
 		navigationItem.leftBarButtonItem = accountImage
+		navigationItem.rightBarButtonItem = settingsImage
 	}
 	
 	//Account Button
@@ -88,27 +92,53 @@ class AccountVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
 		print(123)
 	}
 	
+	//Settings Button
+	@objc func handleSettings() {
+		
+		
+		let cController = SettingTVC()
+		//let aController = SettingsVC(collectionViewLayout: UICollectionViewFlowLayout())
+		self.navigationController?.pushViewController(cController, animated: true)
+		print("Settings Tab is active")
+	}
+	
 	override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		
 		
 		return 1
 	}
 	
+	override func numberOfSections(in collectionView: UICollectionView) -> Int {
+		
+		
+		
+		return 1
+	}
+	
+	
+	
+	
 	
 	//Cell at row
 	override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		
-		if indexPath.item == 0
-		{
+//		if indexPath.item == 0
+//		{
+//		let profileCell = collectionView.dequeueReusableCell(withReuseIdentifier: profileSection, for: indexPath) as! AccountCell
+//
+//			return profileCell
+//		} else {
+//
+//		let familyCell = collectionView.dequeueReusableCell(withReuseIdentifier: users, for: indexPath) as! familyCell
+//
+//			return familyCell
+//		}
+		
 		let profileCell = collectionView.dequeueReusableCell(withReuseIdentifier: profileSection, for: indexPath) as! AccountCell
-			
-			return profileCell
-		} else {
-			
-		let familyCell = collectionView.dequeueReusableCell(withReuseIdentifier: users, for: indexPath) as! familyCell
-			
-			return familyCell
-		}
+
+		profileCell.profielItem = accountDetails![indexPath.item]
+		
+		return profileCell
 	}
 		/*
 		profileCell.backgroundColor = UIColor.rgb(red: 252, green: 252, blue: 252) //off white blue color

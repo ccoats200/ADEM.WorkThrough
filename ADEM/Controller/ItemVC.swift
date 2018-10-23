@@ -52,7 +52,7 @@ class ProductVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
 		navigationItem.titleView = productName
 		navigationController?.navigationBar.isTranslucent = false
 		
-		collectionView?.backgroundColor = UIColor.rgb(red: 241, green: 249, blue: 255)
+		collectionView?.backgroundColor = UIColor.rgb(red: 30, green: 188, blue: 28)
 		
 		collectionView?.register(ItemLayout.self, forCellWithReuseIdentifier: productForVC)
 		

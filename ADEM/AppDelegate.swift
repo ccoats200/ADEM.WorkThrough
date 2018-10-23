@@ -44,7 +44,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		
 		
-		UINavigationBar.appearance().barTintColor = UIColor.rgb(red: 255, green: 255, blue: 255)
+		//UINavigationBar.appearance().barTintColor = UIColor.rgb(red: 255, green: 255, blue: 255)
+		
+		UINavigationBar.appearance().barTintColor = UIColor.rgb(red: 30, green: 188, blue: 29)
 		
 		//Removes the shadow under the Nav bar
 		UINavigationBar.appearance().shadowImage = UIImage()
@@ -55,12 +57,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// to set the below watch https://www.youtube.com/watch?v=APQVltARKF8&list=PL0dzCUj1L5JGKdVUtA5xds1zcyzsz7HLj&index=2 at time 20:00
 
 		var preferredStatusBarStyle : UIStatusBarStyle {
-			return .default
+			
+			return .lightContent
 		}
+
 		
 		//application.statusBarStyle = .default
 		let statusBarBackgroundColor = UIView()
-		statusBarBackgroundColor.backgroundColor = UIColor.rgb(red: 255, green: 255, blue: 255)
+//		statusBarBackgroundColor.backgroundColor = UIColor.rgb(red: 255, green: 255, blue: 255)
+		statusBarBackgroundColor.backgroundColor = UIColor.rgb(red: 30, green: 188, blue: 29)
 		window?.addSubview(statusBarBackgroundColor)
 		window?.addConstraintsWithFormats(format: "H:|[v0]|", views: statusBarBackgroundColor)
 		window?.addConstraintsWithFormats(format: "V:|[v0(20)]|", views: statusBarBackgroundColor)

@@ -101,12 +101,14 @@ class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelega
 		let titleText = UILabel()
 		titleText.text = "List"
 		titleText.font = UIFont(name: "Lato", size: 20)
-		titleText.textColor = UIColor.rgb(red: 30, green: 188, blue: 29)
+		//titleText.textColor = UIColor.rgb(red: 30, green: 188, blue: 29)
+		titleText.textColor = UIColor.rgb(red: 241, green: 249, blue: 255)
 		navigationItem.titleView = titleText
 		navigationController?.navigationBar.isTranslucent = false
 		
-		collectionView?.backgroundColor = UIColor.rgb(red: 241, green: 249, blue: 255)
 		
+		collectionView?.backgroundColor = UIColor.rgb(red: 241, green: 249, blue: 255)
+		//collectionView?.backgroundColor = UIColor.rgb(red: 30, green: 188, blue: 28)
 		collectionView?.register(addProductCell.self, forCellWithReuseIdentifier: addCellID)
 		
 		collectionView?.register(productCellLayout.self, forCellWithReuseIdentifier: cellID)
@@ -130,10 +132,9 @@ class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelega
 	func setUpNavBarButton() {
 		let accountImage = UIBarButtonItem(image: UIImage(named: "account")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleAccount))
 		
-		let settingsImage = UIBarButtonItem(image: UIImage(named: "Settings")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleSettings))
 		
 		navigationItem.leftBarButtonItem = accountImage
-		navigationItem.rightBarButtonItem = settingsImage
+		
 	}
 	
 	//Account Button
@@ -143,14 +144,6 @@ class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelega
 		self.navigationController?.pushViewController(aController, animated: true)
 		//self.present(aController, animated: true, completion: nil)
 		print("Acccount tab is active")
-	}
-	
-	//Settings Button
-	@objc func handleSettings() {
-		
-		let aController = SettingsVC(collectionViewLayout: UICollectionViewFlowLayout())
-		self.navigationController?.pushViewController(aController, animated: true)
-		print("Settings Tab is active")
 	}
 	
 	

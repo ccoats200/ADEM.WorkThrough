@@ -32,7 +32,8 @@ class TabBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICo
 	lazy var tabBarButtons: UICollectionView = {
 		let TBBSLayout = UICollectionViewFlowLayout()
 		let TBBS = UICollectionView(frame: .zero, collectionViewLayout: TBBSLayout)
-		TBBS.backgroundColor = UIColor.rgb(red: 253, green: 254, blue: 255)
+//		TBBS.backgroundColor = UIColor.rgb(red: 253, green: 254, blue: 255)
+		TBBS.backgroundColor = UIColor.rgb(red: 30, green: 188, blue: 29)
 		TBBS.dataSource = self
 		TBBS.delegate = self
 		
