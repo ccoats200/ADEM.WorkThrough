@@ -47,7 +47,7 @@ class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelega
 	
 	//reuse ID's
 	let cellID = "product"
-	let addCellID = "add"
+	
 	
 	//	func fetchItems() {
 	////		let url = NSURL(string: "https://api.wegmans.io/product/products/{sku}")
@@ -109,7 +109,6 @@ class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelega
 		
 		collectionView?.backgroundColor = UIColor.rgb(red: 241, green: 249, blue: 255)
 		//collectionView?.backgroundColor = UIColor.rgb(red: 30, green: 188, blue: 28)
-		collectionView?.register(addProductCell.self, forCellWithReuseIdentifier: addCellID)
 		
 		collectionView?.register(productCellLayout.self, forCellWithReuseIdentifier: cellID)
 		
@@ -176,32 +175,19 @@ class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelega
 	
 	//Number of cells. update later for collection of cells based on product type
 	override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		if let _ = products {
-			return products!.count + 1
-			//return (products?.count)! + 1
-		}
-		return 1
+		
+		return products!.count
 	}
 	
 	//Initiating cell
 	override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		
-		if indexPath.item == 0
-		{
-			let newCell = collectionView.dequeueReusableCell(withReuseIdentifier: addCellID, for: indexPath) as! addProductCell
-			//New item
-			
-				
-			print("Rounds corners")
-			
-			return newCell
-		} else {
 			let productCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! productCellLayout
 			productCell.backgroundColor = UIColor.rgb(red: 252, green: 252, blue: 252) //off white blue color
 			productCell.layer.cornerRadius = 5
 			print("Rounds corners")
 			
-			productCell.gItem = products![indexPath.item - 1]
+			productCell.gItem = products![indexPath.item]
 			
 			//collectionview.insertIems(at: indexPaths)
 			
@@ -213,7 +199,6 @@ class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelega
 			productCell.layer.masksToBounds = false
 			productCell.layer.shadowPath = UIBezierPath(roundedRect: productCell.bounds, cornerRadius: productCell.contentView.layer.cornerRadius).cgPath;
 			return productCell
-		}
 	}
 	
 	
