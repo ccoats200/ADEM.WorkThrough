@@ -29,6 +29,9 @@
 		35A035FC216D861600203087 /* ItemLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A035FB216D861600203087 /* ItemLayout.swift */; };
 		35A035FE216D892E00203087 /* settingsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A035FD216D892E00203087 /* settingsLayout.swift */; };
 		35A0360021715FD100203087 /* SettingTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A035FF21715FD100203087 /* SettingTVC.swift */; };
+		35A0360221815D6300203087 /* PantryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A0360121815D6200203087 /* PantryVC.swift */; };
+		35A036042182A7E100203087 /* Meals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A036032182A7E100203087 /* Meals.swift */; };
+		35A036062187E43100203087 /* AccountFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A036052187E43100203087 /* AccountFriends.swift */; };
 		35BB3003210ABE5800C0F277 /* Design.Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BB3002210ABE5800C0F277 /* Design.Elements.swift */; };
 		35CE51962151F48A00BAAA38 /* Cloud Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CE51952151F48A00BAAA38 /* Cloud Storage.swift */; };
 		35E3D2672049E74B0096C557 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35E3D2662049E74B0096C557 /* CoreBluetooth.framework */; };
@@ -91,6 +94,9 @@
 		35A035FB216D861600203087 /* ItemLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemLayout.swift; sourceTree = "<group>"; };
 		35A035FD216D892E00203087 /* settingsLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsLayout.swift; sourceTree = "<group>"; };
 		35A035FF21715FD100203087 /* SettingTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTVC.swift; sourceTree = "<group>"; };
+		35A0360121815D6200203087 /* PantryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryVC.swift; sourceTree = "<group>"; };
+		35A036032182A7E100203087 /* Meals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meals.swift; sourceTree = "<group>"; };
+		35A036052187E43100203087 /* AccountFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFriends.swift; sourceTree = "<group>"; };
 		35BB3002210ABE5800C0F277 /* Design.Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design.Elements.swift; sourceTree = "<group>"; };
 		35CE51952151F48A00BAAA38 /* Cloud Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cloud Storage.swift"; sourceTree = "<group>"; };
 		35E3D2662049E74B0096C557 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
@@ -172,6 +178,9 @@
 				35A035792164723A00203087 /* SettingsVC.swift */,
 				35A035FF21715FD100203087 /* SettingTVC.swift */,
 				35A0357B2164742D00203087 /* ItemVC.swift */,
+				35A0360121815D6200203087 /* PantryVC.swift */,
+				35A036032182A7E100203087 /* Meals.swift */,
+				35A036052187E43100203087 /* AccountFriends.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -535,16 +544,19 @@
 				356DB9E42113E0DE00B4544C /* tabBar.swift in Sources */,
 				352739A320410BEE00516A7C /* ItemVC1.0.swift in Sources */,
 				35A035FC216D861600203087 /* ItemLayout.swift in Sources */,
+				35A036042182A7E100203087 /* Meals.swift in Sources */,
 				352A76DF215DA6400018E3AB /* profileLayout.swift in Sources */,
 				354D636320213D1600645A7F /* ProductCell.swift in Sources */,
 				3593C146201A59A20064DB5F /* AppDelegate.swift in Sources */,
 				35A035FE216D892E00203087 /* settingsLayout.swift in Sources */,
 				35A0360021715FD100203087 /* SettingTVC.swift in Sources */,
+				35A0360221815D6300203087 /* PantryVC.swift in Sources */,
 				35A0357C2164742D00203087 /* ItemVC.swift in Sources */,
 				35579D34202681C3009708BD /* Product.swift in Sources */,
 				35E3D26E2049F4AA0096C557 /* AccountVC.swift in Sources */,
 				35CE51962151F48A00BAAA38 /* Cloud Storage.swift in Sources */,
 				356DB9E821192BC400B4544C /* Settings.swift in Sources */,
+				35A036062187E43100203087 /* AccountFriends.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

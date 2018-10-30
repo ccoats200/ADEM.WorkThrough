@@ -10,17 +10,7 @@ import Foundation
 import UIKit
 
 
-import Foundation
-import UIKit
-
-protocol TapDelegate {
-	func selectedProduct(products: itemCellContent)
-
-}
-
 class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-	
-
 	
 	var products: [itemCellContent]? = {
 		var add = itemCellContent()
@@ -88,6 +78,7 @@ class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelega
 	//
 	//	}
 
+
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -105,19 +96,21 @@ class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelega
 		titleText.textColor = UIColor.rgb(red: 241, green: 249, blue: 255)
 		navigationItem.titleView = titleText
 		navigationController?.navigationBar.isTranslucent = false
+	
 		
 		
 		collectionView?.backgroundColor = UIColor.rgb(red: 241, green: 249, blue: 255)
 		//collectionView?.backgroundColor = UIColor.rgb(red: 30, green: 188, blue: 28)
 		
 		collectionView?.register(productCellLayout.self, forCellWithReuseIdentifier: cellID)
-		
+
 		//This moves the Cells to the correct offsets, Stylistic choice
 		collectionView?.contentInset = UIEdgeInsets.init(top: 20, left: 20, bottom: 20, right: 20)
 		collectionView?.scrollIndicatorInsets = UIEdgeInsets.init(top: 0, left: 0, bottom: 50, right: 0)
 		
 		setUpTabBar()
 		setUpNavBarButton()
+		
 		
 		let Columns: CGFloat = 3.0
 		let insetDimension: CGFloat = 20.0
@@ -129,10 +122,14 @@ class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelega
 	}
 	
 	func setUpNavBarButton() {
-		let accountImage = UIBarButtonItem(image: UIImage(named: "account")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleAccount))
+		let accountImage = UIBarButtonItem(image: UIImage(named: "Knife")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleAccount))
+		
+		let searchImage = UIBarButtonItem(image: UIImage(named: "search")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleSearch))
 		
 		
 		navigationItem.leftBarButtonItem = accountImage
+		navigationItem.rightBarButtonItem = searchImage
+
 		
 	}
 	
@@ -145,14 +142,16 @@ class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelega
 		print("Acccount tab is active")
 	}
 	
-	
+	//product Button
 	@objc func handleProduct() {
 
 		let cController = ProductVC(collectionViewLayout: UICollectionViewFlowLayout())
 		self.navigationController?.pushViewController(cController, animated: true)
+	
 		print("Settings Tab is active")
 	}
 	
+	//Search Button
 	@objc func handleSearch() {
 		
 		let cController = ProductVC(collectionViewLayout: UICollectionViewFlowLayout())
@@ -160,10 +159,10 @@ class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelega
 		print("Settings Tab is active")
 	}
 	
-	let tabBar: TabBar = {
-		let tB = TabBar()
+	//MenuBar
+	let tabBar: menuBar = {
+		let tB = menuBar()
 		return tB
-		//This needs to be fixed so it doesn't scroll
 	}()
 	
 	private func setUpTabBar() {

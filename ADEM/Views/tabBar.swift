@@ -9,10 +9,22 @@
 
 import UIKit
 
-class TabBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+
+
+class tabBar: UITabBarController, UITabBarControllerDelegate {
+	
+	let tabBarButtonNames = ["Home", "Pantry", "Fave", "Knife_Lrg"]
+	
+}
+
+
+class menuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 	
 	let buttonCellID = "buttonCell"
-	let tabBarButtonNames = ["Home", "Pantry", "addButton", "Home"]
+	let tabBarImages = [
+						["Home", "Pantry", "Fave", "Knife_Lrg"],
+						["Home_Fill", "Pantry", "Fave", "Knife_Lrg"]
+						]
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -24,8 +36,9 @@ class TabBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICo
 		addConstraintsWithFormats(format: "H:|[v0]|", views: tabBarButtons)
 		addConstraintsWithFormats(format: "V:|[v0]|", views: tabBarButtons)
 		let selectedItemIndexPath = NSIndexPath(item: 0, section: 0)
-		tabBarButtons.selectItem(at: selectedItemIndexPath as IndexPath, animated: false, scrollPosition: .top)
-		
+		tabBarButtons.selectItem(at: selectedItemIndexPath as IndexPath, animated: false, scrollPosition: .centeredHorizontally)
+		tabBarButtons.selectItem(at: selectedItemIndexPath as IndexPath, animated: false, scrollPosition: .centeredHorizontally)
+		tabBarButtons.isScrollEnabled = false
 	}
 	
 	
@@ -42,10 +55,10 @@ class TabBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICo
 	}()
 	
 	
-	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		print("makes 4 cells")
-		return 4
+		
+		return tabBarImages[0].count
 		
 	}
 	
@@ -53,7 +66,7 @@ class TabBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICo
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let buttonCell = collectionView.dequeueReusableCell(withReuseIdentifier: buttonCellID, for: indexPath) as! tabCell
 		
-		buttonCell.tabButtonView.image = UIImage(named: tabBarButtonNames[indexPath.item])?.withRenderingMode(.alwaysTemplate)
+		buttonCell.tabButtonView.image = UIImage(named: tabBarImages[0][indexPath.item])?.withRenderingMode(.alwaysTemplate)
 		buttonCell.tintColor = UIColor.rgb(red: 54, green: 147, blue: 111)
 		
 		return buttonCell
@@ -63,7 +76,7 @@ class TabBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICo
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return CGSize(width: frame.width / 4, height: frame.height)
+		return CGSize(width: frame.width / CGFloat(integerLiteral: tabBarImages[0].count), height: frame.height)
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -84,26 +97,45 @@ class tabCell: CellBasics {
 		TBV.tintColor = UIColor.rgb(red: 54, green: 147, blue: 111)
 		return TBV
 	}()
+
+//	func menuBarImageStates(image: UIImage) {
+//
+//		switch image {
+//		case isHighlighted:
+//			for images in tabBarImages[0] {
+//				let
+//
+//		case isSelected:
+//
+//		default:
+//			<#code#>
+//		}
+//
+//
+//	}
 	
+
 	override var isHighlighted: Bool {
 		didSet {
-			tabButtonView.tintColor = isHighlighted ? UIColor.rgb(red: 59, green: 125, blue: 121) : UIColor.rgb(red: 54, green: 147, blue: 111)
-			print("Tab bar item is selected")
+			
+			tabButtonView.tintColor = isHighlighted ? UIColor.rgb(red: 76, green: 82, blue: 111) : UIColor.rgb(red: 54, green: 147, blue: 111)
+			print("Tab bar item is highlighted")
+			//tabButtonView.image = isSelected ? UIImage(named: "Home") : UIImage(named: "Home_Fill")
 		}
 	}
+	
 	
 	override var isSelected : Bool {
 		didSet {
-			tabButtonView.tintColor = isSelected  ? UIColor.rgb(red: 59, green: 125, blue: 121) : UIColor.rgb(red: 54, green: 147, blue: 111)
+			tabButtonView.tintColor = isSelected  ? UIColor.rgb(red: 76, green: 82, blue: 111) : UIColor.rgb(red: 54, green: 147, blue: 111)
 			print("Tab bar item is selected")
-		
+
+			//tabButtonView.image = isSelected ? UIImage(named: "Home") : UIImage(named: "Home_Fill")
 		}
 	}
 	
-	
 	override func setupViews() {
 		super.setupViews()
-		
 		addSubview(tabButtonView)
 		
 		addConstraintsWithFormats(format: "H:[v0(28)]", views: tabButtonView)
