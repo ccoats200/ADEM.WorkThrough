@@ -17,6 +17,7 @@
 		356DB9E22113E06700B4544C /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356DB9E12113E06700B4544C /* ListVC.swift */; };
 		356DB9E42113E0DE00B4544C /* tabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356DB9E32113E0DE00B4544C /* tabBar.swift */; };
 		35766BDF219A782F0034E617 /* TestingAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35766BDE219A782F0034E617 /* TestingAccount.swift */; };
+		35766BE121A5F49B0034E617 /* camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35766BE021A5F49B0034E617 /* camera.swift */; };
 		3593C146201A59A20064DB5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3593C145201A59A20064DB5F /* AppDelegate.swift */; };
 		3593C14B201A59A20064DB5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3593C149201A59A20064DB5F /* Main.storyboard */; };
 		3593C14E201A59A20064DB5F /* ADEM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3593C14C201A59A20064DB5F /* ADEM.xcdatamodeld */; };
@@ -78,6 +79,7 @@
 		356DB9E12113E06700B4544C /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 		356DB9E32113E0DE00B4544C /* tabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabBar.swift; sourceTree = "<group>"; };
 		35766BDE219A782F0034E617 /* TestingAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAccount.swift; sourceTree = "<group>"; };
+		35766BE021A5F49B0034E617 /* camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = camera.swift; sourceTree = "<group>"; };
 		3593C142201A59A20064DB5F /* ADEM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADEM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3593C145201A59A20064DB5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3593C14A201A59A20064DB5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				352A76DE215DA6400018E3AB /* profileLayout.swift */,
 				35A035FB216D861600203087 /* ItemLayout.swift */,
 				35A035FD216D892E00203087 /* settingsLayout.swift */,
+				35766BE021A5F49B0034E617 /* camera.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 				35A0357A2164723A00203087 /* SettingsVC.swift in Sources */,
 				356DB9E22113E06700B4544C /* ListVC.swift in Sources */,
 				3593C14E201A59A20064DB5F /* ADEM.xcdatamodeld in Sources */,
+				35766BE121A5F49B0034E617 /* camera.swift in Sources */,
 				35C60E90218A849900C9C716 /* BLEHR.swift in Sources */,
 				35BB3003210ABE5800C0F277 /* Design.Elements.swift in Sources */,
 				35481F5B2072BFC20072DBDA /* SettingsLayout.swift in Sources */,

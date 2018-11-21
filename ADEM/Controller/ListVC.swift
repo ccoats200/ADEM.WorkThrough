@@ -113,6 +113,8 @@ class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelega
 		setUpNavBarButton()
 		
 		
+		
+		
 		let Columns: CGFloat = 3.0
 		let insetDimension: CGFloat = 20.0
 		let cellHeight: CGFloat = 125.0
@@ -138,7 +140,12 @@ class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelega
 	//Account Button
 	@objc func handleAccount() {
 		
-		let aController = AccountVC(collectionViewLayout: UICollectionViewFlowLayout())
+		//This is for the multiple collection views, horizontal and vertical
+		let aController = AccountVC()
+		
+		//This is for the custome collection view Add button image for profile image
+		
+		//let aController = AccountVC(collectionViewLayout: UICollectionViewFlowLayout())
 		self.navigationController?.pushViewController(aController, animated: true)
 		//self.present(aController, animated: true, completion: nil)
 		print("Acccount tab is active")

@@ -8,11 +8,13 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 //This is an attempt at getting different cells. this is the yelllow red and blue attempt
 
-/*
+
 class AccountVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+	
 
 	
 	//Cell Id's
@@ -22,6 +24,10 @@ class AccountVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		
+	
+		collectionView.isScrollEnabled = false
 		
 		view.backgroundColor = .white; //just to test
 		
@@ -34,10 +40,11 @@ class AccountVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
 		//Device Cell
 		collectionView.register(Cell3.self, forCellWithReuseIdentifier: cellId3)
 		
-		
 		setupViews(); //setup all views
 		
 	}
+	
+	
 	
 	func setupViews() {
 		
@@ -66,7 +73,7 @@ class AccountVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
 		
 		switch indexPath.section {
 		case 0:
-			let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath);
+			let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
 			return cell
 			
 		case 1:
@@ -149,6 +156,7 @@ class Cell: UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDe
 		let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
 		cv.backgroundColor = .yellow; //testing
 		cv.layer.cornerRadius = 10
+
 		cv.translatesAutoresizingMaskIntoConstraints = false
 		return cv
 	}()
@@ -157,13 +165,21 @@ class Cell: UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDe
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-		cell.backgroundColor = .red
-		cell.layer.cornerRadius = 60
+		cell.backgroundView = UIImageView(image: profilepic)
+		cell.clipsToBounds = true
+		
+		//cell.layer.cornerRadius = 60
 		
 		return cell
 	}
 	
-
+	
+	let profilepic: UIImage = {
+		let pp = UIImage(named: "addButton")!
+		print("Created the add button")
+		
+		return pp
+	}()
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		
@@ -354,5 +370,5 @@ class Cell3: UICollectionViewCell, UICollectionViewDataSource, UICollectionViewD
 		fatalError("init(coder:) has not been implemented")
 	}
 }
-*/
+
 

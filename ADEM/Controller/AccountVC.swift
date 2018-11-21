@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreBluetooth
 
-
+/*
 class AccountVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 	
 	//var centralManager: CBCentralManager!
@@ -30,7 +30,7 @@ class AccountVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
 	//var BLESwitch = UISwitch()
 	
 	
-	
+	/*
 	var accountDetails: accountContent? = {
 		var profile = accountContent()
 		//add.itemImageName = "addButton"
@@ -42,7 +42,7 @@ class AccountVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
 		return profName
 		
 	}()
-	
+	*/
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -116,62 +116,56 @@ class AccountVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
 	override func numberOfSections(in collectionView: UICollectionView) -> Int {
 		
 		let sections = [AccountCell(), familyCell()]
+		
 	
 		return sections.count
 	}
-
-	
-//	func sectionContents() {
-//		switch indexPath.section {
-//		case 0:
-//			_ = collectionView.dequeueReusableCell(withReuseIdentifier: profileSection, for: indexPath) as! AccountCell
-//		case 1:
-//			_ = collectionView.dequeueReusableCell(withReuseIdentifier: users, for: indexPath) as! familyCell
-//
-//		default:
-//			_ = collectionView.dequeueReusableCell(withReuseIdentifier: profileSection, for: indexPath) as! AccountCell
-//		}
-//	}
 	
 	
 	//Cell at row
 	override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		
-		
-//		let cellAtSection:UICollectionViewCell
-//
-//		switch cellAtSection {
-//		case self:
-//			_ = collectionView.dequeueReusableCell(withReuseIdentifier: profileSection, for: indexPath) as! AccountCell
-//		case 1:
-//			_ = collectionView.dequeueReusableCell(withReuseIdentifier: users, for: indexPath) as! familyCell
-//
-//		default:
-//			print("Broken")
-//		}
 	
-		
-		if indexPath.section == 0
-		{
-		let profileCell = collectionView.dequeueReusableCell(withReuseIdentifier: profileSection, for: indexPath) as! AccountCell
-
+		switch indexPath.section {
+		case 0:
+			let profileCell = collectionView.dequeueReusableCell(withReuseIdentifier: profileSection, for: indexPath) as! AccountCell
+			
 			return profileCell
-		} else {
-
-		let familyCell = collectionView.dequeueReusableCell(withReuseIdentifier: users, for: indexPath) as! familyCell
-
+			
+		case 1:
+			let familyCell = collectionView.dequeueReusableCell(withReuseIdentifier: users, for: indexPath) as! familyCell
+			
 			return familyCell
+		default:
+			let profileCell = collectionView.dequeueReusableCell(withReuseIdentifier: profileSection, for: indexPath) as! AccountCell
+			
+			return profileCell
+		}
+		
 	}
-}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		let sizeofAccountCell = CGSize(width: view.frame.width, height: 125)
-		return sizeofAccountCell
+		
+		switch indexPath.section {
+		case 0:
+			let sizeofAccountCell = CGSize(width: view.frame.width, height: 135)
+			return sizeofAccountCell
+			
+		case 1:
+		let sizeofAccountCell1 = CGSize(width: view.frame.width, height: 100)
+			return sizeofAccountCell1
+		
+		default:
+			let sizeofAccountCells = CGSize(width: view.frame.width, height: 15)
+			return sizeofAccountCells
+		}
+		
+		
 	}
 	
 	//Space between rows
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-		return 25
+		return 5
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -216,3 +210,4 @@ class AccountVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
     */
 
 
+*/ 
