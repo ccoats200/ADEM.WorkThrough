@@ -11,6 +11,7 @@ import UIKit
 
 
 class AccountCell: CellBasics {
+
 	
 	var profielItem: accountContent? {
 		
@@ -59,6 +60,7 @@ class AccountCell: CellBasics {
 		
 		return NN
 	}()
+	
 
 	
 	override func setupViews() {
@@ -67,7 +69,6 @@ class AccountCell: CellBasics {
 		
 		//Vertical
 		addConstraintsWithFormats(format: "V:|[v0(110)]|", views: profileImageSection)
-		
 		
 		//Horizontal
 		addConstraintsWithFormats(format: "H:|[v0]|", views: profileImageSection)
@@ -83,7 +84,6 @@ class AccountCell: CellBasics {
 		addConstraint(NSLayoutConstraint(item: personName, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 0, constant: 100))
 
 	}
-	
 }
 
 class familyCollectionView: UICollectionViewController, UICollectionViewDelegateFlowLayout {
@@ -91,7 +91,6 @@ class familyCollectionView: UICollectionViewController, UICollectionViewDelegate
 	var products: [itemCellContent]? = {
 		var add = itemCellContent()
 		//add.itemImageName = "addButton"
-		
 		
 		var mom = itemCellContent()
 		mom.itemName = "Eggs"
@@ -113,13 +112,11 @@ class familyCollectionView: UICollectionViewController, UICollectionViewDelegate
 	let cellID = "product"
 	
 	
-	
-	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		//fetchItems()
-		
+
 		navigationItem.title = "List"
 		
 		//Left aligned title
@@ -132,17 +129,14 @@ class familyCollectionView: UICollectionViewController, UICollectionViewDelegate
 		navigationItem.titleView = titleText
 		navigationController?.navigationBar.isTranslucent = false
 		
-		
-		
 		collectionView?.backgroundColor = UIColor.rgb(red: 241, green: 249, blue: 255)
-		//collectionView?.backgroundColor = UIColor.rgb(red: 30, green: 188, blue: 28)
 		
+		//collectionView?.backgroundColor = UIColor.rgb(red: 30, green: 188, blue: 28)
 		collectionView?.register(productCellLayout.self, forCellWithReuseIdentifier: cellID)
 		
 		//This moves the Cells to the correct offsets, Stylistic choice
 		collectionView?.contentInset = UIEdgeInsets.init(top: 20, left: 20, bottom: 20, right: 20)
 		collectionView?.scrollIndicatorInsets = UIEdgeInsets.init(top: 0, left: 0, bottom: 50, right: 0)
-		
 		
 		let Columns: CGFloat = 3.0
 		let insetDimension: CGFloat = 20.0
@@ -181,7 +175,6 @@ class familyCollectionView: UICollectionViewController, UICollectionViewDelegate
 		return productCell
 	}
 	
-	
 	//Lets Build that app ep.16
 	//	override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 	//		let Prod = productViewC()
@@ -191,7 +184,6 @@ class familyCollectionView: UICollectionViewController, UICollectionViewDelegate
 	override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		print("123")
 	}
-	
 	
 	//Space between rows
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -205,24 +197,9 @@ class familyCollectionView: UICollectionViewController, UICollectionViewDelegate
 
 class familyCell: CellBasics {
 
-
-//	let collectionView: UICollectionView = {
-//
-//		let layout = UICollectionViewFlowLayout()
-//		layout.minimumLineSpacing = 30
-//		layout.scrollDirection = .horizontal
-//		let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-//		return cv
-//	}()
-	
-	
-	
-	
 	let kitchenStaff: UIImageView = {
 		let Staff = UIImageView()
-		//Staff.image = UIImage(named: "eggs")
 		Staff.contentMode = .center
-		//addItemButtonImage.contentMode = .scaleAspectFit
 		Staff.clipsToBounds = true
 		Staff.layer.masksToBounds = true
 		Staff.layer.cornerRadius = 10
@@ -233,16 +210,12 @@ class familyCell: CellBasics {
 		return Staff
 	}()
 
-
 	override func setupViews() {
 		addSubview(kitchenStaff)
 
 		addConstraintsWithFormats(format: "H:|[v0]|", views: kitchenStaff)
 		addConstraintsWithFormats(format: "V:|[v0]|", views: kitchenStaff)
 	}
-
-
-
 }
 
 

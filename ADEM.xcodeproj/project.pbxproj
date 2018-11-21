@@ -16,7 +16,7 @@
 		35579D37202682C9009708BD /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35579D36202682C9009708BD /* DataService.swift */; };
 		356DB9E22113E06700B4544C /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356DB9E12113E06700B4544C /* ListVC.swift */; };
 		356DB9E42113E0DE00B4544C /* tabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356DB9E32113E0DE00B4544C /* tabBar.swift */; };
-		356DB9E821192BC400B4544C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356DB9E721192BC400B4544C /* Settings.swift */; };
+		35766BDF219A782F0034E617 /* TestingAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35766BDE219A782F0034E617 /* TestingAccount.swift */; };
 		3593C146201A59A20064DB5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3593C145201A59A20064DB5F /* AppDelegate.swift */; };
 		3593C14B201A59A20064DB5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3593C149201A59A20064DB5F /* Main.storyboard */; };
 		3593C14E201A59A20064DB5F /* ADEM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3593C14C201A59A20064DB5F /* ADEM.xcdatamodeld */; };
@@ -33,6 +33,8 @@
 		35A036042182A7E100203087 /* Meals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A036032182A7E100203087 /* Meals.swift */; };
 		35A036062187E43100203087 /* AccountFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A036052187E43100203087 /* AccountFriends.swift */; };
 		35BB3003210ABE5800C0F277 /* Design.Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BB3002210ABE5800C0F277 /* Design.Elements.swift */; };
+		35C60E8E218A7F0A00C9C716 /* BLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C60E8D218A7F0A00C9C716 /* BLE.swift */; };
+		35C60E90218A849900C9C716 /* BLEHR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C60E8F218A849900C9C716 /* BLEHR.swift */; };
 		35CE51962151F48A00BAAA38 /* Cloud Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CE51952151F48A00BAAA38 /* Cloud Storage.swift */; };
 		35E3D2672049E74B0096C557 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35E3D2662049E74B0096C557 /* CoreBluetooth.framework */; };
 		35E3D26E2049F4AA0096C557 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E3D26D2049F4AA0096C557 /* AccountVC.swift */; };
@@ -75,7 +77,7 @@
 		35579D36202682C9009708BD /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		356DB9E12113E06700B4544C /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 		356DB9E32113E0DE00B4544C /* tabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabBar.swift; sourceTree = "<group>"; };
-		356DB9E721192BC400B4544C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		35766BDE219A782F0034E617 /* TestingAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAccount.swift; sourceTree = "<group>"; };
 		3593C142201A59A20064DB5F /* ADEM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADEM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3593C145201A59A20064DB5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3593C14A201A59A20064DB5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -98,6 +100,8 @@
 		35A036032182A7E100203087 /* Meals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meals.swift; sourceTree = "<group>"; };
 		35A036052187E43100203087 /* AccountFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFriends.swift; sourceTree = "<group>"; };
 		35BB3002210ABE5800C0F277 /* Design.Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design.Elements.swift; sourceTree = "<group>"; };
+		35C60E8D218A7F0A00C9C716 /* BLE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLE.swift; sourceTree = "<group>"; };
+		35C60E8F218A849900C9C716 /* BLEHR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEHR.swift; sourceTree = "<group>"; };
 		35CE51952151F48A00BAAA38 /* Cloud Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cloud Storage.swift"; sourceTree = "<group>"; };
 		35E3D2662049E74B0096C557 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		35E3D26D2049F4AA0096C557 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
@@ -172,7 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				352739A220410BEE00516A7C /* ItemVC1.0.swift */,
-				356DB9E721192BC400B4544C /* Settings.swift */,
 				35E3D26D2049F4AA0096C557 /* AccountVC.swift */,
 				356DB9E12113E06700B4544C /* ListVC.swift */,
 				35A035792164723A00203087 /* SettingsVC.swift */,
@@ -181,6 +184,7 @@
 				35A0360121815D6200203087 /* PantryVC.swift */,
 				35A036032182A7E100203087 /* Meals.swift */,
 				35A036052187E43100203087 /* AccountFriends.swift */,
+				35766BDE219A782F0034E617 /* TestingAccount.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -266,6 +270,8 @@
 		35E3D2682049E9190096C557 /* Bluetooth */ = {
 			isa = PBXGroup;
 			children = (
+				35C60E8D218A7F0A00C9C716 /* BLE.swift */,
+				35C60E8F218A849900C9C716 /* BLEHR.swift */,
 			);
 			path = Bluetooth;
 			sourceTree = "<group>";
@@ -536,6 +542,7 @@
 				35A0357A2164723A00203087 /* SettingsVC.swift in Sources */,
 				356DB9E22113E06700B4544C /* ListVC.swift in Sources */,
 				3593C14E201A59A20064DB5F /* ADEM.xcdatamodeld in Sources */,
+				35C60E90218A849900C9C716 /* BLEHR.swift in Sources */,
 				35BB3003210ABE5800C0F277 /* Design.Elements.swift in Sources */,
 				35481F5B2072BFC20072DBDA /* SettingsLayout.swift in Sources */,
 				35579D37202682C9009708BD /* DataService.swift in Sources */,
@@ -550,12 +557,13 @@
 				3593C146201A59A20064DB5F /* AppDelegate.swift in Sources */,
 				35A035FE216D892E00203087 /* settingsLayout.swift in Sources */,
 				35A0360021715FD100203087 /* SettingTVC.swift in Sources */,
+				35766BDF219A782F0034E617 /* TestingAccount.swift in Sources */,
 				35A0360221815D6300203087 /* PantryVC.swift in Sources */,
 				35A0357C2164742D00203087 /* ItemVC.swift in Sources */,
 				35579D34202681C3009708BD /* Product.swift in Sources */,
+				35C60E8E218A7F0A00C9C716 /* BLE.swift in Sources */,
 				35E3D26E2049F4AA0096C557 /* AccountVC.swift in Sources */,
 				35CE51962151F48A00BAAA38 /* Cloud Storage.swift in Sources */,
-				356DB9E821192BC400B4544C /* Settings.swift in Sources */,
 				35A036062187E43100203087 /* AccountFriends.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

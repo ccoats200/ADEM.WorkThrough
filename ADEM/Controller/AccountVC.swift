@@ -15,6 +15,9 @@ class AccountVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
 	
 	//var centralManager: CBCentralManager!
 	
+	
+	let sections = [AccountCell(), familyCell()]
+	
 	//Reuse ID's
 	
 	let profileSection = "Profile"
@@ -39,6 +42,7 @@ class AccountVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
 		return profName
 		
 	}()
+	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -75,7 +79,6 @@ class AccountVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
 	
 	func setUpNavBarButto(){
 		
-	
 		let settingsImage = UIBarButtonItem(image: UIImage(named: "Gear")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleSettings))
 		
 		
@@ -84,6 +87,7 @@ class AccountVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
 		navigationItem.leftBarButtonItem = accountImage
 		navigationItem.rightBarButtonItem = settingsImage
 	}
+	
 	
 	//Account Button
 	@objc func home() {
@@ -110,7 +114,6 @@ class AccountVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
 	}
 	
 	override func numberOfSections(in collectionView: UICollectionView) -> Int {
-		
 		
 		let sections = [AccountCell(), familyCell()]
 	
@@ -146,6 +149,7 @@ class AccountVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
 //		default:
 //			print("Broken")
 //		}
+	
 		
 		if indexPath.section == 0
 		{
@@ -159,22 +163,6 @@ class AccountVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
 			return familyCell
 	}
 }
-
-		/*
-		profileCell.backgroundColor = UIColor.rgb(red: 252, green: 252, blue: 252) //off white blue color
-		profileCell.layer.cornerRadius = 5
-		print("Rounds corners")
-		
-		
-		//Shadow
-		profileCell.layer.shadowColor = UIColor.gray.cgColor
-		profileCell.layer.shadowOffset = CGSize(width: 0, height: 3.0)
-		profileCell.layer.shadowOpacity = 0.7
-		profileCell.layer.shadowRadius = 2.0
-		profileCell.layer.masksToBounds = false
-		profileCell.layer.shadowPath = UIBezierPath(roundedRect: profileCell.bounds, cornerRadius: profileCell.contentView.layer.cornerRadius).cgPath;
-*/
-	
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		let sizeofAccountCell = CGSize(width: view.frame.width, height: 125)
@@ -226,4 +214,5 @@ class AccountVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
         // Pass the selected object to the new view controller.
     }
     */
+
 

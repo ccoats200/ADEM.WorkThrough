@@ -106,6 +106,7 @@ class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelega
 
 		//This moves the Cells to the correct offsets, Stylistic choice
 		collectionView?.contentInset = UIEdgeInsets.init(top: 20, left: 20, bottom: 20, right: 20)
+		
 		collectionView?.scrollIndicatorInsets = UIEdgeInsets.init(top: 0, left: 0, bottom: 50, right: 0)
 		
 		setUpTabBar()
@@ -123,6 +124,7 @@ class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelega
 	
 	func setUpNavBarButton() {
 		let accountImage = UIBarButtonItem(image: UIImage(named: "Knife")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleAccount))
+		
 		
 		let searchImage = UIBarButtonItem(image: UIImage(named: "search")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleSearch))
 		
@@ -154,8 +156,8 @@ class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelega
 	//Search Button
 	@objc func handleSearch() {
 		
-		let cController = ProductVC(collectionViewLayout: UICollectionViewFlowLayout())
-		self.navigationController?.pushViewController(cController, animated: true)
+		let cController = SettingsVC()
+	self.navigationController?.pushViewController(cController, animated: true)
 		print("Settings Tab is active")
 	}
 	
