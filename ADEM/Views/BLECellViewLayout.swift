@@ -1,12 +1,12 @@
 //
-//  BLEHR.swift
+//  BLECellViewLayout.swift
 //  ADEM
 //
-//  Created by Coleman Coats on 10/31/18.
+//  Created by Coleman Coats on 11/28/18.
 //  Copyright © 2018 Coleman Coats. All rights reserved.
 //
 
-
+/*
 
 import Foundation
 import UIKit
@@ -43,31 +43,11 @@ let objectConcurrencyLimitExceeded = CBUUID(string: "0x82")
 
 
 
-struct CellData {
-	//let img: UIImage?
-	let msg: String?
-	let connectingActivityIndicator = UIActivityIndicatorView()
-
-}
-
 
 // STEP 0.1: this class adopts both the central and peripheral delegates
 // and therefore must conform to these protocols' requirements
-class SettingsVC: UITableViewController, CBCentralManagerDelegate, CBPeripheralDelegate {
+class BLECell: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate {
 	
-	
-	
-	func connected(_ sender: AnyObject) {
-		print("They tapped image number : \(sender.view.tag)")
-		//Your code for navigate to another viewcontroller
-		func handleSearch() {
-			
-			let cController = SettingsVC()
-			self.navigationController?.pushViewController(cController, animated: true)
-			print("Settings Tab is active")
-		}
-		
-	}
 	// MARK: - Core Bluetooth class member variables
 	
 	// STEP 0.2: create instance variables of the
@@ -78,8 +58,8 @@ class SettingsVC: UITableViewController, CBCentralManagerDelegate, CBPeripheralD
 	
 	// MARK: - UI outlets / member variables
 	
-	//var connectedLBL = UILabel()
-	//var BLESwitch = UISwitch()
+	var connectedLBL = UILabel()
+	var BLESwitch = UISwitch()
 	var DeviceLBL = UILabel()
 	var connectionStatusView = UIView()
 	var connectingActivityIndicator = UIActivityIndicatorView()
@@ -88,24 +68,17 @@ class SettingsVC: UITableViewController, CBCentralManagerDelegate, CBPeripheralD
 	var itemNameLabel = UILabel()
 	var bluetoothOffLabel = UILabel()
 	
-	
-	
-	var data = [CellData]()
 	// HealthKit setup
 	//let healthKitInterface = HealthKitInterface()
 	
 	// MARK: - UIViewController delegate
 	
-	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 		
-		
-		
-		
 		// initially, we're scanning and not connected
-		connectingActivityIndicator.color = UIColor.red
+		connectingActivityIndicator.backgroundColor = UIColor.red
 		connectingActivityIndicator.startAnimating()
 		connectionStatusView.backgroundColor = UIColor.red
 		brandNameTextField.text = "show"
@@ -114,9 +87,8 @@ class SettingsVC: UITableViewController, CBCentralManagerDelegate, CBPeripheralD
 		// just in case Bluetooth is turned off
 		bluetoothOffLabel.alpha = 0.0
 		
-		view.backgroundColor = UIColor.white
+		view.backgroundColor = UIColor.orange
 		
-	
 		// STEP 1: create a concurrent background queue for the central
 		let centralQueue: DispatchQueue = DispatchQueue(label: "com.iosbrain.centralQueueName", attributes: .concurrent)
 		// STEP 2: create a central to scan for, connect to,
@@ -130,14 +102,9 @@ class SettingsVC: UITableViewController, CBCentralManagerDelegate, CBPeripheralD
 		// healthKitInterface.readGenderType()
 		
 		bluetooth()
-		//BLESwitch.addTarget(self, action: #selector(switchStatus(_:)), for: UIControl.Event.valueChanged)
-		
-		tableView.register(customCell.self, forCellReuseIdentifier: privacy)
-		
-		data = [CellData.init(msg: "test")]
+		BLESwitch.addTarget(self, action: #selector(switchStatus(_:)), for: UIControl.Event.valueChanged)
 	}
 	
-	/*
 	//BluetoothStatus
 	@objc func switchStatus(_ sender: UISwitch) {
 		
@@ -149,113 +116,13 @@ class SettingsVC: UITableViewController, CBCentralManagerDelegate, CBPeripheralD
 		}
 		
 	}
-	*/
-	
-	//private let myArray: NSArray = ["First","Second","Third"]
-	//private var myTableView: UITableView!
-	
-	let privacy = "privacy"
-	
-	let settingsOptions = ["Nothing",
-						   "Powered on",
-						   "General",
-						   "extra",
-						   "extra",
-						   "extra",
-						   "extra"]
-	
-	
-	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		
-		switch indexPath.row {
-		case 0:
-			let cell = self.tableView.dequeueReusableCell(withIdentifier: self.privacy, for: indexPath) as! customCell
-			//cell.mainImage = data[indexPath.row].img
-			//cell.message = data[indexPath.row].msg
-			cell.textLabel?.text = settingsOptions[indexPath.row]
-			cell.textLabel?.textAlignment = .left
-			cell.backgroundColor = UIColor.cyan
-			return cell
-		case 1:
-			
-				let cell1 = self.tableView.dequeueReusableCell(withIdentifier: self.privacy, for: indexPath) as! customCell
-				
-				let cntlbl = UILabel()
-				cntlbl.frame = CGRect(x: 0, y: 0, width: 125, height: 50)
-				
-				cell1.textLabel?.text = settingsOptions[indexPath.row]
-				if centralManager?.state == .poweredOn {
-				cell1.textLabel?.textAlignment = .center
-				cell1.backgroundColor = UIColor.blue
-				cell1.accessoryView = cntlbl
-				cntlbl.text = "Not Connected"
-				
-				} else if centralManager?.state == .unknown {
-					print("when I find something to put here")
-				} else {
-				cell1.textLabel?.textAlignment = .right
-				cell1.backgroundColor = UIColor.orange
-				
-				}
-				return cell1
-			/*
-		case 2:
-		
-			let cell2 = self.tableView.dequeueReusableCell(withIdentifier: self.privacy, for: indexPath) as! customCell
-			//cell.mainImage = data[indexPath.row].img
-			//cell.message = data[indexPath.row].msg
-			cell2.textLabel?.text = settingsOptions[indexPath.row]
-			if decodePeripheralState(peripheralState: <#CBPeripheralState#>).state == .connected {
-				cell2.textLabel?.textAlignment = .center
-				cell2.backgroundColor = UIColor.green
-			} else {
-			
-				cell2.textLabel?.textAlignment = .right
-				cell2.backgroundColor = UIColor.orange
-				
-			}
-
-			return cell2
-*/
-			
-		case 3:
-			let cell3 = self.tableView.dequeueReusableCell(withIdentifier: self.privacy, for: indexPath) as! customCell
-			//cell.mainImage = data[indexPath.row].img
-			//cell.message = data[indexPath.row].msg
-			cell3.textLabel?.text = settingsOptions[indexPath.row]
-			cell3.textLabel?.textAlignment = .left
-			cell3.backgroundColor = UIColor.green
-			return cell3
-			
-		default:
-			let cntlbl = UILabel()
-			cntlbl.frame = CGRect(x: 0, y: 0, width: 125, height: 50)
-			let cellDefault = self.tableView.dequeueReusableCell(withIdentifier: self.privacy, for: indexPath) as! customCell
-			cellDefault.textLabel?.text = settingsOptions[indexPath.row]
-			cellDefault.textLabel?.textAlignment = .left
-			cellDefault.backgroundColor = UIColor.red
-			cellDefault.accessoryView = cntlbl
-			cntlbl.text = "Trying"
-			return cellDefault
-		}
-		
-	}
-	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		
-		return privacy.count
-	}
-	
-	override func numberOfSections(in tableView: UITableView) -> Int {
-		
-		return 1
-	}
 	
 	
 	func bluetooth() {
 		
 		//Switch
-		//BLESwitch.frame = CGRect(x: 0, y: 0, width: 200, height: 21)
-		//BLESwitch.center = CGPoint(x: 163, y: 200)
+		BLESwitch.frame = CGRect(x: 0, y: 0, width: 200, height: 21)
+		BLESwitch.center = CGPoint(x: 163, y: 200)
 		DeviceLBL.text = "test"
 		connectionStatusView.backgroundColor = UIColor.blue
 		connectingActivityIndicator.backgroundColor = UIColor.yellow
@@ -269,7 +136,7 @@ class SettingsVC: UITableViewController, CBCentralManagerDelegate, CBPeripheralD
 		brandNameTextField.center = CGPoint(x: 120, y: 120)
 		brandNameTextField.textColor = UIColor.black
 		
-		//self.view.addSubview(BLESwitch)
+		self.view.addSubview(BLESwitch)
 		self.view.addSubview(DeviceLBL)
 		self.view.addSubview(connectionStatusView)
 		self.view.addSubview(connectingActivityIndicator)
@@ -280,11 +147,11 @@ class SettingsVC: UITableViewController, CBCentralManagerDelegate, CBPeripheralD
 		
 		
 		//LBL
-		//connectedLBL.frame = CGRect(x: 0, y: 0, width: 200, height: 21)
-		//connectedLBL.center = CGPoint(x: 160, y: 285)
-		//.textAlignment = .center
-		//connectedLBL.text = "Connect"
-		//self.view.addSubview(connectedLBL)
+		connectedLBL.frame = CGRect(x: 0, y: 0, width: 200, height: 21)
+		connectedLBL.center = CGPoint(x: 160, y: 285)
+		connectedLBL.textAlignment = .center
+		connectedLBL.text = "Connect"
+		self.view.addSubview(connectedLBL)
 	}
 	
 	
@@ -318,15 +185,15 @@ class SettingsVC: UITableViewController, CBCentralManagerDelegate, CBPeripheralD
 			print("Bluetooth status is POWERED OFF")
 			bluetoothOffLabel.alpha = 1.0
 		case .poweredOn:
+			//self.view.backgroundColor = UIColor.red
 			print("Bluetooth status is POWERED ON")
-			//testing that it is on
 			
 			DispatchQueue.main.async { () -> Void in
 				self.bluetoothOffLabel.alpha = 0.0
 				
 				
 				self.connectingActivityIndicator.startAnimating()
-	
+				
 			}
 			
 			// STEP 3.2: scan for peripherals that we're interested in
@@ -571,3 +438,4 @@ class SettingsVC: UITableViewController, CBCentralManagerDelegate, CBPeripheralD
 	} // END func decodePeripheralState(peripheralState
 	
 } // END class HeartRateMonitorViewController
+*/

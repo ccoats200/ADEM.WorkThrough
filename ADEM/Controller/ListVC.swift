@@ -27,12 +27,12 @@ class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelega
 		Toast.itemImageName = "bread"
 		Toast.Quantity = "5"
 		
-		var bitch = itemCellContent()
-		bitch.itemName = "Strawberries"
-		bitch.itemImageName = "eggs"
-		bitch.Quantity = "10"
+		var test = itemCellContent()
+		test.itemName = "Strawberries"
+		test.itemImageName = "eggs"
+		test.Quantity = "10"
 		
-		return [eggs, Toast, bitch]
+		return [eggs, Toast, test]
 	}()
 	
 	//reuse ID's
@@ -217,9 +217,9 @@ class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelega
 //	}
 	
 	override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		_ = addProductCell.self
+		//_ = addProductCell.self
 
-		_ = 0
+		//_ = 0
 		handleProduct()
 		print("123")
 	}

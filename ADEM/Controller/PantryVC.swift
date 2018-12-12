@@ -59,7 +59,8 @@ class PantryVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 		collectionView?.backgroundColor = UIColor.rgb(red: 241, green: 249, blue: 255)
 		
 		collectionView?.register(AccountCell.self, forCellWithReuseIdentifier: profileSection)
-		collectionView?.register(familyCell.self, forCellWithReuseIdentifier: users)
+		
+		collectionView?.register(deviceCells.self, forCellWithReuseIdentifier: users)
 		
 		//This moves the Cells to the correct offsets, Stylistic choice
 		collectionView?.contentInset = UIEdgeInsets.init(top: 20, left: 20, bottom: 20, right: 20)

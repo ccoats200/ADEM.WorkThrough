@@ -86,33 +86,37 @@ class ItemLayout: CellBasics {
 		//Vertical Constraints (productImageView = 105)
 		addConstraintsWithFormats(format: "V:|-2-[v0(100)]-1-[v1(20)]-3-|", views: Item, ItemName)
 		
-//		addConstraintsWithFormats(format: "V:|-2-[v0(100)]-1-[v1(20)]-3-[v2(1)]-2-[v3(200)]-|", views: Item, ItemName, sView, infoView)
+		//addConstraintsWithFormats(format: "V:|-2-[v0(100)]-1-[v1(20)]-3-[v2(1)]-2-[v3(200)]-|", views: Item, ItemName, sView, infoView)
 		//addConstraintsWithFormats(format: "V:|-3-[v0(105)]-4-[v1(20)]-8-[v2(1)]|", views: productImageView, productName, seperatorView)
 		
-		//Seperator Constaint
+		//Seperator Constraint
 		addConstraintsWithFormats(format: "H:|[v0]|", views: sView)
 		
 		//Constraints: Only use if multiple constraints needed on same view
 		
 		//Top Constraints Quantity
 		addConstraint(NSLayoutConstraint(item: sView, attribute: .top, relatedBy: .equal, toItem: ItemName, attribute: .top, multiplier: 1, constant: 5))
+		
 		//Right Constraints Quantity
 		addConstraint(NSLayoutConstraint(item: sView, attribute: .right, relatedBy: .equal, toItem: ItemName, attribute: .right, multiplier: 1, constant: -5))
+		
 		//Height Constraint Quantity
 		addConstraint(NSLayoutConstraint(item: sView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 1))
+		
 		//Width Constraint
 		addConstraint(NSLayoutConstraint(item: sView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 0, constant: 1))
 		
-		
 		//Top Constraints Quantity
 		addConstraint(NSLayoutConstraint(item: infoView, attribute: .top, relatedBy: .equal, toItem: sView, attribute: .top, multiplier: 1, constant: 5))
+		
 		//Right Constraints Quantity
 		addConstraint(NSLayoutConstraint(item: infoView, attribute: .right, relatedBy: .equal, toItem: sView, attribute: .right, multiplier: 1, constant: -5))
+		
 		//Height Constraint Quantity
 		addConstraint(NSLayoutConstraint(item: infoView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 100))
+		
 		//Width Constraint
 		addConstraint(NSLayoutConstraint(item: infoView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 0, constant: 100))
-		
 	}
 	
 	func setUpAddButton(){

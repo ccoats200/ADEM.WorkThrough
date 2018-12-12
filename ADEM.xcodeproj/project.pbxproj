@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		352739A320410BEE00516A7C /* ItemVC1.0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352739A220410BEE00516A7C /* ItemVC1.0.swift */; };
 		352A76DF215DA6400018E3AB /* profileLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352A76DE215DA6400018E3AB /* profileLayout.swift */; };
+		352E14D521AF96C500950D84 /* BLECellViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352E14D421AF96C500950D84 /* BLECellViewLayout.swift */; };
+		352E14D721AFA1EE00950D84 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352E14D621AFA1EE00950D84 /* View.swift */; };
+		352E14D921B8BBFF00950D84 /* TableViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352E14D821B8BBFF00950D84 /* TableViewTest.swift */; };
 		35481F5B2072BFC20072DBDA /* SettingsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35481F5A2072BFC10072DBDA /* SettingsLayout.swift */; };
 		354D636320213D1600645A7F /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354D636220213D1600645A7F /* ProductCell.swift */; };
 		354E9160206E7BB70000DAA9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354E915F206E7BB70000DAA9 /* Color.swift */; };
@@ -17,7 +20,6 @@
 		356DB9E22113E06700B4544C /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356DB9E12113E06700B4544C /* ListVC.swift */; };
 		356DB9E42113E0DE00B4544C /* tabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356DB9E32113E0DE00B4544C /* tabBar.swift */; };
 		35766BDF219A782F0034E617 /* TestingAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35766BDE219A782F0034E617 /* TestingAccount.swift */; };
-		35766BE121A5F49B0034E617 /* camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35766BE021A5F49B0034E617 /* camera.swift */; };
 		3593C146201A59A20064DB5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3593C145201A59A20064DB5F /* AppDelegate.swift */; };
 		3593C14B201A59A20064DB5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3593C149201A59A20064DB5F /* Main.storyboard */; };
 		3593C14E201A59A20064DB5F /* ADEM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3593C14C201A59A20064DB5F /* ADEM.xcdatamodeld */; };
@@ -71,6 +73,9 @@
 		245909CF130337B03D70A882 /* Pods-ADEMUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADEMUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ADEMUITests/Pods-ADEMUITests.release.xcconfig"; sourceTree = "<group>"; };
 		352739A220410BEE00516A7C /* ItemVC1.0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemVC1.0.swift; sourceTree = "<group>"; };
 		352A76DE215DA6400018E3AB /* profileLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileLayout.swift; sourceTree = "<group>"; };
+		352E14D421AF96C500950D84 /* BLECellViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLECellViewLayout.swift; sourceTree = "<group>"; };
+		352E14D621AFA1EE00950D84 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		352E14D821B8BBFF00950D84 /* TableViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTest.swift; sourceTree = "<group>"; };
 		35481F5A2072BFC10072DBDA /* SettingsLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLayout.swift; sourceTree = "<group>"; };
 		354D636220213D1600645A7F /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		354E915F206E7BB70000DAA9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -79,7 +84,6 @@
 		356DB9E12113E06700B4544C /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 		356DB9E32113E0DE00B4544C /* tabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabBar.swift; sourceTree = "<group>"; };
 		35766BDE219A782F0034E617 /* TestingAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAccount.swift; sourceTree = "<group>"; };
-		35766BE021A5F49B0034E617 /* camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = camera.swift; sourceTree = "<group>"; };
 		3593C142201A59A20064DB5F /* ADEM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADEM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3593C145201A59A20064DB5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3593C14A201A59A20064DB5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -170,7 +174,8 @@
 				352A76DE215DA6400018E3AB /* profileLayout.swift */,
 				35A035FB216D861600203087 /* ItemLayout.swift */,
 				35A035FD216D892E00203087 /* settingsLayout.swift */,
-				35766BE021A5F49B0034E617 /* camera.swift */,
+				352E14D421AF96C500950D84 /* BLECellViewLayout.swift */,
+				352E14D821B8BBFF00950D84 /* TableViewTest.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 			children = (
 				354E915F206E7BB70000DAA9 /* Color.swift */,
 				35BB3002210ABE5800C0F277 /* Design.Elements.swift */,
+				352E14D621AFA1EE00950D84 /* View.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -377,6 +383,11 @@
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					3593C158201A59A30064DB5F = {
 						CreatedOnToolsVersion = 9.2;
@@ -545,14 +556,15 @@
 				35A0357A2164723A00203087 /* SettingsVC.swift in Sources */,
 				356DB9E22113E06700B4544C /* ListVC.swift in Sources */,
 				3593C14E201A59A20064DB5F /* ADEM.xcdatamodeld in Sources */,
-				35766BE121A5F49B0034E617 /* camera.swift in Sources */,
 				35C60E90218A849900C9C716 /* BLEHR.swift in Sources */,
 				35BB3003210ABE5800C0F277 /* Design.Elements.swift in Sources */,
 				35481F5B2072BFC20072DBDA /* SettingsLayout.swift in Sources */,
 				35579D37202682C9009708BD /* DataService.swift in Sources */,
 				35E5AE1F214B3D8300D193BA /* CellLayout.swift in Sources */,
 				354E9160206E7BB70000DAA9 /* Color.swift in Sources */,
+				352E14D521AF96C500950D84 /* BLECellViewLayout.swift in Sources */,
 				356DB9E42113E0DE00B4544C /* tabBar.swift in Sources */,
+				352E14D921B8BBFF00950D84 /* TableViewTest.swift in Sources */,
 				352739A320410BEE00516A7C /* ItemVC1.0.swift in Sources */,
 				35A035FC216D861600203087 /* ItemLayout.swift in Sources */,
 				35A036042182A7E100203087 /* Meals.swift in Sources */,
@@ -564,6 +576,7 @@
 				35766BDF219A782F0034E617 /* TestingAccount.swift in Sources */,
 				35A0360221815D6300203087 /* PantryVC.swift in Sources */,
 				35A0357C2164742D00203087 /* ItemVC.swift in Sources */,
+				352E14D721AFA1EE00950D84 /* View.swift in Sources */,
 				35579D34202681C3009708BD /* Product.swift in Sources */,
 				35C60E8E218A7F0A00C9C716 /* BLE.swift in Sources */,
 				35E3D26E2049F4AA0096C557 /* AccountVC.swift in Sources */,
@@ -742,6 +755,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 76CPVG5GZ5;
 				INFOPLIST_FILE = ADEM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				"IPHONEOS_DEPLOYMENT_TARGET[arch=*]" = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Test.ADEM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -759,6 +774,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 76CPVG5GZ5;
 				INFOPLIST_FILE = ADEM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				"IPHONEOS_DEPLOYMENT_TARGET[arch=*]" = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Test.ADEM;
 				PRODUCT_NAME = "$(TARGET_NAME)";

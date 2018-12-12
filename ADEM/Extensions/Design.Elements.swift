@@ -63,3 +63,9 @@ override func viewWillDisappear(_ animated: Bool) {
 	UIDevice.current.setValue(value, forKey: "orientation")
 }
 */ 
+
+enum deviceViews: Int {
+
+	case Ble = 0, Ble1 = 1, Ble2 = 2, Ble3 = 3
+}
+
