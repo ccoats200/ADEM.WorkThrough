@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 //This is an attempt at getting different cells. this is the yelllow red and blue attempt
 

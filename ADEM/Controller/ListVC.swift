@@ -162,8 +162,8 @@ class CustomCollecCellDesign: UICollectionViewController, UICollectionViewDelega
 	
 	//Search Button
 	@objc func handleSearch() {
-		
-		let cController = SettingsVC()
+		//let cController = SettingsVC()
+		let cController = login()
 	self.navigationController?.pushViewController(cController, animated: true)
 		print("Settings Tab is active")
 	}

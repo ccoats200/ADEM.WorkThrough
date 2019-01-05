@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		
 		
-		FirebaseApp.configure()
+		
 		
 		//		let settingsController = settingsLayout(collectionViewLayout: UICollectionViewFlowLayout())
 		//		window?.rootViewController = UINavigationController(rootViewController: settingsController)
@@ -52,6 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		let layout = UICollectionViewFlowLayout()
 		//window?.rootViewController = UINavigationController(rootViewController: AccountVC(collectionViewLayout: layout))
 		window?.rootViewController = UINavigationController(rootViewController: CustomCollecCellDesign(collectionViewLayout: layout))
+		//window?.rootViewController = login()
 		
 		
 		
@@ -82,7 +83,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		window?.addConstraintsWithFormats(format: "V:|[v0(20)]|", views: statusBarBackgroundColor)
 	
 		//Firestore
-		//let db = Firestore.firestore()
+		FirebaseApp.configure()
+		let db = Firestore.firestore()
+		let settings = db.settings
+		settings.areTimestampsInSnapshotsEnabled = true
+		db.settings = settings
+
 		
 		return true
 	}

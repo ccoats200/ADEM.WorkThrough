@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 import CoreBluetooth
 
+//Delete
+
 /*
 class AccountVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 	
